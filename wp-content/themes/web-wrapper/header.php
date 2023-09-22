@@ -20,6 +20,10 @@
   <meta name="twitter:description" content="Elevate your online presence with affordable web development services. Expertise, budget-friendly solutions, and stunning designs await you. Contact us now!">
   <meta name="twitter:image" content="<?php echo get_template_directory_uri() . '/img/logo/' ?>/favicon-32x32.png"">
 
+  <meta name="geo.placename" content="Toronto, Ontario, Canada">
+<meta name="geo.region" content="CA-ON">
+<meta name="geo.position" content="43.651070,-79.347015">
+<meta name="ICBM" content="43.651070,-79.347015">
 
   <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri() . '/img/logo/' ?>/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri() . '/img/logo/' ?>/favicon-32x32.png">
