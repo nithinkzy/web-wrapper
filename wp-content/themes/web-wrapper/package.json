@@ -1,0 +1,23 @@
+{
+  "name": "Mopasangh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w assets/scss/custom.scss  -o assets/css ",
+    "start": "parcel serve src/index.html --public-url / --dist-dir dist"
+  },
+  "author": "Nithin",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "node-sass": "^8.0.0",
+    "sass": "^1.55.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.1",
+    "parcel": "^2.8.1"
+  }
+}
