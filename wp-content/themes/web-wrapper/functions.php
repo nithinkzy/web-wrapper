@@ -8,12 +8,13 @@ function enqueue_ajax_script()
     ));
 
     // Enqueue custom CSS file
-    wp_enqueue_style('custom-style', get_template_directory_uri() . '/css/theme.css', array(), '1.0.0');
+    wp_enqueue_style('custom-style', get_template_directory_uri() . '/css/theme.css', array(), '2.0.0');
 
     // Enqueue jQuery
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.4.min.js', array(), '3.6.4', true);
 
     // Enqueue Font Awesome CSS
+    // wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css', array(), '5.3.2');
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0');
     wp_enqueue_style('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), '2.3.1');
 

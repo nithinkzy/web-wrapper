@@ -5,8 +5,7 @@
         <div class="row">
             <div class="col-12 col-lg-5 py-4 text-center text-lg-start">
                 <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="/">
-                    <img src="<?php echo get_template_directory_uri() . '/img/logo/logo.png' ?>" width="50" height="50"
-                        fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16">
+                    <img src="<?php echo get_template_directory_uri() . '/img/logo/logo.png' ?>" alt="Web Wrapper Logo" width="200" height="200" fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16">
 
 
                 </a>
@@ -16,24 +15,24 @@
                 <span class="h6">Company</span>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a href="#" class="link-fancy link-fancy-light">Services</a>
+                        <a href="/#services" class="link-fancy link-fancy-light">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="link-fancy link-fancy-light">Portfolio</a>
+                        <a href="/#portfolio" class="link-fancy link-fancy-light">Portfolio</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="link-fancy link-fancy-light">About</a>
+                        <a href="/about" class="link-fancy link-fancy-light">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="link-fancy link-fancy-light">Pricing</a>
+                        <a href="/pricing" class="link-fancy link-fancy-light">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="link-fancy link-fancy-light">Testimonials</a>
+                        <a href="/#testimonials" class="link-fancy link-fancy-light">Testimonials</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="link-fancy link-fancy-light">Blog</a>
-                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="/blog" class="link-fancy link-fancy-light">Blog</a>
+                    </li> -->
                 </ul>
             </div>
             <div class="col border-end border-dark">
@@ -46,7 +45,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="link-fancy link-fancy-light">
-                            Ecommerce Development
+                            Website Audit
                         </a>
                     </li>
                     <li class="nav-item">
@@ -108,53 +107,53 @@
 
 <?php wp_footer(); ?>
 <script>
-AOS.init({
-    duration: 800, // values from 0 to 3000, with step 50ms
-});
+    AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+    });
 </script>
 <script>
-let scrollpos = window.scrollY
-const header = document.querySelector(".navbar")
-const header_height = header.offsetHeight
+    let scrollpos = window.scrollY
+    const header = document.querySelector(".navbar")
+    const header_height = header.offsetHeight
 
-const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
 
-window.addEventListener('scroll', function() {
-    scrollpos = window.scrollY;
+    window.addEventListener('scroll', function() {
+        scrollpos = window.scrollY;
 
-    if (scrollpos >= header_height) {
-        add_class_on_scroll()
-    } else {
-        remove_class_on_scroll()
-    }
+        if (scrollpos >= header_height) {
+            add_class_on_scroll()
+        } else {
+            remove_class_on_scroll()
+        }
 
-    console.log(scrollpos)
-})
+        console.log(scrollpos)
+    })
 
-jQuery(document).ready(function($) {
-    $('#contact_form').on('submit', function(e) {
-        e.preventDefault();
-        var formData = $(this).serialize();
+    jQuery(document).ready(function($) {
+        $('#contact_form').on('submit', function(e) {
+            e.preventDefault();
+            var formData = $(this).serialize();
 
-        $.ajax({
-            type: 'POST',
-            url: frontend_ajax_object.ajaxurl,
-            data: {
-                action: 'submit_contact_form',
-                formData: formData,
-            },
-            success: function(response) {
-                if (response === 'success') {
-                    alert('Form submitted successfully. Thank you!');
-                    // You can also redirect the user or display a success message here
-                } else {
-                    alert('Form submission failed. Please try again later.');
+            $.ajax({
+                type: 'POST',
+                url: ajax_object.ajax_url,
+                data: {
+                    action: 'submit_contact_form',
+                    formData: formData,
+                },
+                success: function(response) {
+                    if (response === 'success') {
+                        alert('Form submitted successfully. Thank you!');
+                        // You can also redirect the user or display a success message here
+                    } else {
+                        alert('Form submission failed. Please try again later.');
+                    }
                 }
-            }
+            });
         });
     });
-});
 </script>
 </body>
 

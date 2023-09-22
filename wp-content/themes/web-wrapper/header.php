@@ -4,14 +4,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="A well made and handcrafted Bootstrap 5 template">
+  <meta name="description" content="Elevate your online presence with affordable web development services. Expertise, budget-friendly solutions, and stunning designs await you. Contact us now!">
+  <meta name="keywords" content="web development, affordable web design, website services, online presence">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Web-Wrapper | Affordable Web Development Services">
+  <meta property="og:description" content="Elevate your online presence with affordable web development services. Expertise, budget-friendly solutions, and stunning designs await you. Contact us now!">
+  <meta property="og:image" content="<?php echo get_template_directory_uri() . '/img/logo/' ?>/favicon-32x32.png"">
+  <meta property="og:url" content="https://web-wrapper.com">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@web-wrapper">
+  <meta name="twitter:title" content="Web-Wrapper | Affordable Web Development Services">
+  <meta name="twitter:description" content="Elevate your online presence with affordable web development services. Expertise, budget-friendly solutions, and stunning designs await you. Contact us now!">
+  <meta name="twitter:image" content="<?php echo get_template_directory_uri() . '/img/logo/' ?>/favicon-32x32.png"">
+
 
   <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri() . '/img/logo/' ?>/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri() . '/img/logo/' ?>/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri() . '/img/logo/' ?>/favicon-16x16.png">
   <link rel="manifest" href="<?php echo get_template_directory_uri() . '/img/logo/' ?>/site.webmanifest">
 
-  <title>Web-Wrapper | Elevate Your Online Presence with Expert Web Development Services</title>
+  <title>Affordable Web Development Services | Web-Wrapper</title>
   <?php wp_head(); ?>
 
   <link rel="stylesheet" href="css/theme.min.css">
@@ -73,49 +88,54 @@
 
 <body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
 
-  <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
-    <div class="container">
+  <nav id="navScroll" class="navbar navbar-expand-lg navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
+    <div class="container-fluid">
       <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="/">
-        <img src="<?php echo get_template_directory_uri() . '/img/logo/logo.png' ?>" width="50" height="50" fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16">
+        <img src="<?php echo get_template_directory_uri() . '/img/logo/logo.png' ?>" width="50" height="50" alt="Web Wrapper Logo" fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16">
         <!-- <span class="ms-md-1 mt-1 fw-bolder me-md-5">Web Wrapper</span> -->
       </a>
+      <button class="navbar-toggler btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </button>
 
-      <ul class="d-none d-md-block navbar-nav mx-auto mb-2 mb-lg-0 list-group list-group-horizontal">
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="#services" aria-label="A sample content page">
-            Services
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="#portfolio" aria-label="A system message page">
-            Portfolio
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="#about" aria-label="A system message page">
-            About
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="#pricing" aria-label="A system message page">
-            Pricing
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="#testimonials" aria-label="A system message page">
-            Testimonials
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="/blog" aria-label="A system message page">
-            Blog
-          </a>
-        </li>
-
-      </ul>
+      <div class="collapse navbar-collapse bg-black" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 list-group list-group-horizontal">
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="/#services" aria-label="A sample content page">
+              Services
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="/#portfolio" aria-label="A system message page">
+              Portfolio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="/#about" aria-label="A system message page">
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="/#pricing" aria-label="A system message page">
+              Pricing
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="/#testimonials" aria-label="A system message page">
+              Testimonials
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link fs-5" href="/blog" aria-label="A system message page">
+              Blog
+            </a>
+          </li> -->
+        </ul>
+      </div>
       <a href="#contact" aria-label="Download this template" class="btn btn-outline-light">
         <small>Get in Touch</small>
       </a>
+
     </div>
   </nav>
 
