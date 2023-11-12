@@ -1,0 +1,144 @@
+// Include custom veriables default overrides here
+// $primary: rgb(127, 24, 127);
+// $primary-opacity-8: rgba(127, 24, 127, 0.8);
+// $gray: #E6E6E6;
+// $sale: rgba(167, 4, 4, 0.8);
+// $headings-font-family: 'Syne', sans-serif;
+// $headings-font-weight: 800;
+// $font-family-base: 'Syne', sans-serif;
+
+// $theme-colors: (
+//   "primary": $primary,
+//   "primary-opacity-8": $primary-opacity-8,
+//   "gray": $gray,
+//   "sale": $sale
+// );
+
+// // Create your own map
+// $custom-color: (
+//   "icon-background": rgba(127, 24, 127, 0.2)
+// );
+
+// // Merge maps
+// $theme-colors: map-merge($theme-colors, $custom-color);
+
+
+// $utilities: (
+//   "rounded": (
+//     property: border-radius,
+//     class: rounded,
+//     values: (
+//       null: 1rem,
+//       circle: 50%
+//     )
+//   )
+// );
+
+@import "./bootstrap/scss/bootstrap";
+
+// Add custom code after this
+
+/* Custom Styles for Your WordPress Theme */
+body {
+    // font-family: 'Your Preferred Font', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    color: #fff;
+}
+
+/* Navigation */
+.navbar {
+    padding: 15px 0;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+}
+
+/* Services Section */
+#services {
+    padding: 80px 0;
+}
+
+/* Website Process Section */
+#website-process {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+/* Unique Features Section */
+#unique-features {
+    padding: 80px 0;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 80px 0;
+}
+
+/* Call to Action Section */
+#cta {
+    padding: 60px 0;
+}
+
+/* FAQ Section */
+#faq {
+    padding: 80px 0;
+}
+
+/* Blog Section */
+#blog {
+    padding: 80px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 80px 0;
+}
+
+/* Footer Quick Links */
+footer a {
+    color: #ffc107;
+}
+
+/* Footer Free Consultation Form */
+footer form {
+    max-width: 300px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
