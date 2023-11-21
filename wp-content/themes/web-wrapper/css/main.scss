@@ -58,30 +58,6 @@ h2 {
     font-weight: 600;
 }
 
-/* Hero Section */
-
-/* Add rounded corners to the navbar */
-// .site-header {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     height: auto;
-//     width: 100%;
-//     z-index: 1000;
-//     padding: 30px 30px 0px;
-
-//     .navbar {
-//         background: rgba(252, 189, 215, 0.2);
-//         height: 60px;
-//         width: 100%;
-//         max-width: 1700px;
-//         margin: auto;
-//         padding: 8px 0px !important;
-//         align-items: center;
-//         border-radius: 50px;
-
-//     }
-// }
 
 /* Style the navigation links */
 .site-header .navbar-nav a {
@@ -94,18 +70,13 @@ h2 {
 }
 
 
-
-//  Front - page
-
-
-
-
+// Hero Section
 .hero {
-    padding: 100px 0;
     color: #ffffff;
     position: relative;
     // height: 60vh;
     overflow: hidden;
+
 
     &:before {
         content: '';
@@ -131,9 +102,17 @@ h2 {
         letter-spacing: -0.03rem;
 
         @include media-breakpoint-up(md) {
-            font-size: 74px;
-            font-weight: 400;
+            font-size: 4rem;
+            font-weight: 700;
             margin-bottom: 76px;
+            line-height: 4.8rem;
+            letter-spacing: -0.04rem;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 4.8rem;
+            letter-spacing: -0.03rem;
         }
 
     }
@@ -141,16 +120,20 @@ h2 {
     .hero-subtitle {
         line-height: 1.44rem;
         letter-spacing: normal;
+        font-size: 1.2rem;
 
         @include media-breakpoint-up(md) {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+            font-size: 2rem;
+            line-height: 2.4rem;
+        }
+        @include media-breakpoint-up(lg) {
+            line-height: 1.44rem;
+            letter-spacing: normal;
+            font-size: 1.2rem;
         }
     }
 
-    .lead {
-        font-size: 9px;
-    }
+   
 }
 
 @keyframes aurora {
@@ -245,10 +228,11 @@ h2 {
         grid-column-gap: 1rem;
         grid-row-gap: 2rem;
         // padding: 1rem;
-
+        
         @include media-breakpoint-up(md) {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 1rem;
         }
     }
@@ -358,19 +342,4 @@ footer a {
 /* Footer Free Consultation Form */
 footer form {
     max-width: 300px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero {
-        padding: 80px 0;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
 }

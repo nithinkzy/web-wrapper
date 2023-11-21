@@ -9687,8 +9687,6 @@ h2, .h2 {
   font-weight: 600;
 }
 
-/* Hero Section */
-/* Add rounded corners to the navbar */
 /* Style the navigation links */
 .site-header .navbar-nav a {
   padding: 10px 15px;
@@ -9700,7 +9698,6 @@ h2, .h2 {
 }
 
 .hero {
-  padding: 100px 0;
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -9728,23 +9725,38 @@ h2, .h2 {
 }
 @media (min-width: 768px) {
   .hero .hero-title {
-    font-size: 74px;
-    font-weight: 400;
+    font-size: 4rem;
+    font-weight: 700;
     margin-bottom: 76px;
+    line-height: 4.8rem;
+    letter-spacing: -0.04rem;
+  }
+}
+@media (min-width: 992px) {
+  .hero .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+    letter-spacing: -0.03rem;
   }
 }
 .hero .hero-subtitle {
   line-height: 1.44rem;
   letter-spacing: normal;
+  font-size: 1.2rem;
 }
 @media (min-width: 768px) {
   .hero .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 2rem;
+    line-height: 2.4rem;
   }
 }
-.hero .lead {
-  font-size: 9px;
+@media (min-width: 992px) {
+  .hero .hero-subtitle {
+    line-height: 1.44rem;
+    letter-spacing: normal;
+    font-size: 1.2rem;
+  }
 }
 
 @keyframes aurora {
@@ -9826,7 +9838,8 @@ h2, .h2 {
 @media (min-width: 768px) {
   #services .featured-services {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1rem;
   }
 }
@@ -9921,17 +9934,4 @@ footer a {
 /* Footer Free Consultation Form */
 footer form {
   max-width: 300px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero {
-    padding: 80px 0;
-  }
-  .hero-title {
-    font-size: 2rem;
-  }
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
 }/*# sourceMappingURL=main.css.map */

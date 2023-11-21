@@ -21,14 +21,14 @@ get_header();
 
 
 	<section class="hero">
-		<div class="container mt-5 pt-3">
+		<div class="container pt-5 ">
 			<div class="row d-flex align-items-center">
 				<div class="content col-lg-6 col-md-12 d-flex flex-column ">
 					<h1 class="hero-title mb-3 mb-md-5">We Believe <br> Every Business <br> Deserves a Website</h1>
 					<p class="hero-subtitle mb-5">Building Affordable and Local Websites: <br> Your Best Choice for Small Business Success</p>
 					<div class="">
-						<a href="#consultation" class="btn btn-primary btn-lg mb-2 mb-md-3">Request Free Consultation</a>
-						<p class="lead ps-2">no hidden catches, just affordable solutions for your needs.</p>
+						<a href="#consultation" class="btn btn-primary btn-lg mb-5">Request Free Consultation</a>
+						<!-- <p class="text-small lead ps-2">no hidden catches, just affordable solutions for your needs.</p> -->
 					</div>
 
 				</div>
@@ -95,11 +95,11 @@ get_header();
 	<section id="about">
 		<div class="container">
 			<div class="row align-items-center justify-content-between">
-				<div class="d-none d-md-block col-5 pe-5">
+				<div class="d-none d-lg-block col-5 pe-5">
 					<!-- <h2>Discover Why Businesses Trust Web-Wrapper — From Idea to Online Excellence.</h2> -->
 					<p class="trust-text">"With Web-Wrapper, it's like having a helpful friend to guide you through the process.<span class="highlight"> You don't need to be tech-savvy;</span> we're here to make it easy for you."</p>
 				</div>
-				<div class="col-12 col-md-7">
+				<div class="col-12 col-lg-7">
 					<h2 class="mb-5 ">Discover why businesses trust Web-Wrapper <br><span> — from idea to online excellence.</span></h2>
 
 					<div class="row trust-factors py-4 py-md-5">
@@ -220,8 +220,8 @@ get_header();
 			<!-- Main Title and Subtitle -->
 			<div class="row mb-5 text-start text-md-center">
 				<div class="col ">
-					<h2 class="mb-3">How Web-Wrapper can help you</h2>
-					<p class="lead col-12 col-md-6 mx-auto">Getting your website up and running is an uncomplicated process with us. <br> We're here to guide you every step of the way.</p>
+					<h2 class="mb-3">How Web-Wrapper can help</h2>
+					<p class="lead col-12 col-lg-6 mx-auto">Getting your website up and running is an uncomplicated process with us. <br> We're here to guide you every step of the way.</p>
 				</div>
 			</div>
 
