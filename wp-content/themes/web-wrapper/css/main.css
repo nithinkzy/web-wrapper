@@ -9787,14 +9787,6 @@ h2, .h2 {
 #about h2 span, #about .h2 span {
   color: rgba(0, 0, 0, 0.2509803922);
 }
-#about .trust-text {
-  font-size: 3rem;
-  padding-right: 6rem;
-  font-weight: 100;
-  font-family: "Archivo Narrow", sans-serif;
-  color: rgba(0, 0, 0, 0.2509803922);
-  line-height: 57.6px;
-}
 #about .trust-factors {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -9816,15 +9808,42 @@ h2, .h2 {
   padding-left: 10px;
 }
 #about .larger-text {
-  font-size: 40px;
-  line-height: 44px;
+  font-size: 2rem;
+  line-height: 2.4rem;
   font-weight: 700;
   margin-bottom: 2rem;
 }
 #about .smaller-text {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.2rem;
   font-weight: 400;
+}
+@media (min-width: 768px) {
+  #about .larger-text {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  #about .smaller-text {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  #about .trust-text {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    padding-right: 6rem;
+    font-weight: 100;
+    font-family: "Archivo Narrow", sans-serif;
+    color: rgba(0, 0, 0, 0.2509803922);
+  }
+}
+@media (min-width: 1200px) {
+  #about .trust-text {
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
 }
 
 /* Services Section */

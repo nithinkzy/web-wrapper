@@ -102,7 +102,7 @@ get_header();
 				<div class="col-12 col-lg-7">
 					<h2 class="mb-5 ">Discover why businesses trust Web-Wrapper <br><span> — from idea to online excellence.</span></h2>
 
-					<div class="row trust-factors py-4 py-md-5">
+					<div class="row trust-factors py-4">
 						<!-- Item 1: 5+ Years Experience -->
 						<div class="text-start">
 							<div class="icon">

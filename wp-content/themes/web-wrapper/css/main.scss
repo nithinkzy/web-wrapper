@@ -108,6 +108,7 @@ h2 {
             line-height: 4.8rem;
             letter-spacing: -0.04rem;
         }
+
         @include media-breakpoint-up(lg) {
             font-size: 4rem;
             font-weight: 700;
@@ -126,6 +127,7 @@ h2 {
             font-size: 2rem;
             line-height: 2.4rem;
         }
+
         @include media-breakpoint-up(lg) {
             line-height: 1.44rem;
             letter-spacing: normal;
@@ -133,7 +135,7 @@ h2 {
         }
     }
 
-   
+
 }
 
 @keyframes aurora {
@@ -174,14 +176,6 @@ h2 {
         }
     }
 
-    .trust-text {
-        font-size: 3rem;
-        padding-right: 6rem;
-        font-weight: 100;
-        font-family: 'Archivo Narrow', sans-serif;
-        color: #00000040;
-        line-height: 57.6px;
-    }
 
     .trust-factors {
 
@@ -202,19 +196,51 @@ h2 {
             border-image-slice: 1; // Ensure the entire border is covered
             padding-left: 10px; // Adjust as needed
         }
+
     }
 
     .larger-text {
-        font-size: 40px;
-        line-height: 44px;
+        font-size: 2rem;
+        line-height: 2.4rem;
         font-weight: 700;
         margin-bottom: 2rem;
     }
 
     .smaller-text {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 1rem;
+        line-height: 1.2rem;
         font-weight: 400;
+    }
+
+    @include media-breakpoint-up(md) {
+        .larger-text {
+            font-size: 40px;
+            line-height: 44px;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .smaller-text {
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 400;
+        }
+
+        .trust-text {
+            font-size: 2.5rem;
+            line-height: 3rem;
+            padding-right: 6rem;
+            font-weight: 100;
+            font-family: 'Archivo Narrow', sans-serif;
+            color: #00000040;
+        }
+
+    }
+    @include media-breakpoint-up(xl) {
+        .trust-text {
+            font-size: 3rem;
+            line-height: 3.6rem;
+        }
     }
 }
 
@@ -228,7 +254,7 @@ h2 {
         grid-column-gap: 1rem;
         grid-row-gap: 2rem;
         // padding: 1rem;
-        
+
         @include media-breakpoint-up(md) {
             display: grid;
             grid-template-rows: repeat(2, 1fr);
