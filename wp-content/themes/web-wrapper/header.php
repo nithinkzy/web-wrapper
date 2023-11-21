@@ -28,7 +28,7 @@
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'web-wrapper'); ?></a>
 
 		<header id="masthead" class="site-header">
-			<nav class="navbar navbar-expand-lg navbar-dark ">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div class="container">
 					<?php
 					// Your custom logo code here if needed
@@ -36,7 +36,9 @@
 					?>
 					<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
 
-				
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 					<?php
 					require_once get_template_directory() . '/bootstrap-navwalker.php';
 
@@ -56,5 +58,3 @@
 				</div>
 			</nav>
 		</header><!-- #masthead -->
-
-		

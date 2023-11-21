@@ -9689,26 +9689,6 @@ h2, .h2 {
 
 /* Hero Section */
 /* Add rounded corners to the navbar */
-.site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: auto;
-  width: 100%;
-  z-index: 1000;
-  padding: 30px 30px 0px;
-}
-.site-header .navbar {
-  background: rgba(252, 189, 215, 0.2);
-  height: 60px;
-  width: 100%;
-  max-width: 1700px;
-  margin: auto;
-  padding: 8px 0px !important;
-  align-items: center;
-  border-radius: 50px;
-}
-
 /* Style the navigation links */
 .site-header .navbar-nav a {
   padding: 10px 15px;
