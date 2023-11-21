@@ -143,7 +143,7 @@ get_header();
 
 	<section id="services">
 		<div class="container pb-5 mb-5">
-			<p class="mb-3 mb-md-5 lead">Transform Your Online Presence with Expert Design and Maintenance Solutions</p>
+			<p class="mb-5 lead">Transform Your Online Presence with Expert Design and Maintenance Solutions</p>
 			<div class="featured-services">
 
 				<!-- Service 1: Website Design and Development -->

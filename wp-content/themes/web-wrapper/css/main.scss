@@ -236,6 +236,7 @@ h2 {
         }
 
     }
+
     @include media-breakpoint-up(xl) {
         .trust-text {
             font-size: 3rem;
@@ -255,12 +256,7 @@ h2 {
         grid-row-gap: 2rem;
         // padding: 1rem;
 
-        @include media-breakpoint-up(md) {
-            display: grid;
-            grid-template-rows: repeat(2, 1fr);
-            grid-template-columns: repeat(2, 1fr);
-            grid-column-gap: 1rem;
-        }
+
     }
 
     .card {
@@ -281,6 +277,24 @@ h2 {
 
     .card-body a {
         padding-left: 0 !important;
+    }
+
+    @include media-breakpoint-up(md) {
+        .featured-services {
+
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 1rem;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .featured-services {
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
     }
 }
 

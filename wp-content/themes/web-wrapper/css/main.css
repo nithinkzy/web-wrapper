@@ -9854,14 +9854,6 @@ h2, .h2 {
   grid-column-gap: 1rem;
   grid-row-gap: 2rem;
 }
-@media (min-width: 768px) {
-  #services .featured-services {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 1rem;
-  }
-}
 #services .card {
   border-radius: 0.5rem;
   border: 0 solid #e5e7eb;
@@ -9875,6 +9867,20 @@ h2, .h2 {
 }
 #services .card-body a {
   padding-left: 0 !important;
+}
+@media (min-width: 768px) {
+  #services .featured-services {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  #services .featured-services {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* Website Process Section */
