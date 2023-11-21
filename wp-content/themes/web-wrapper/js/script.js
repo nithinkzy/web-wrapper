@@ -4,7 +4,16 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   wrap: false
 })
 
-jQuery(document).ready(function($) {
-  console.log('Custom JavaScript loaded.');
-  // Your other jQuery code here
+jQuery(document).ready(function ($) {
+  // Check if the window has been scrolled
+  $(window).scroll(function () {
+    // Add class 'fixed-top' to the navbar when scrolling down
+    if ($(this).scrollTop() > 50) {
+      $('.navbar').addClass('fixed-top');
+    } else {
+      // Remove the 'fixed-top' class when scrolling back to the top
+      // $('.navbar').toggleClass('bg-dark');
+      $('.navbar').removeClass('fixed-top');
+    }
+  });
 });

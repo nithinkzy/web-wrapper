@@ -179,12 +179,14 @@ add_action('wp_enqueue_scripts', 'web_wrapper_scripts');
 
 /**
  * Custom Fonts
- * font-family: 'Nunito', sans-serif;
+ * font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Raleway Dots', sans-serif;
  */
 function enqueue_custom_fonts()
 {
 	if (!is_admin()) {
-		wp_register_style('syne', 'https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+		wp_register_style('syne', 'https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Montserrat:wght@400;700&display=swap');
 
 		wp_enqueue_style('syne');
 	}

@@ -28,7 +28,7 @@
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'web-wrapper'); ?></a>
 
 		<header id="masthead" class="site-header">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<nav class="navbar navbar-expand-lg navbar-dark ">
 				<div class="container">
 					<?php
 					// Your custom logo code here if needed
@@ -56,3 +56,5 @@
 				</div>
 			</nav>
 		</header><!-- #masthead -->
+
+		

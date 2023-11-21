@@ -3,37 +3,22 @@
 // $primary-opacity-8: rgba(127, 24, 127, 0.8);
 // $gray: #E6E6E6;
 // $sale: rgba(167, 4, 4, 0.8);
-// $headings-font-family: 'Syne', sans-serif;
+
+$primary: #3cb816;
+$secondary: #1a1c1f;
+// font-family: 'Lato', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+$headings-font-family: 'Montserrat', sans-serif;
 // $headings-font-weight: 800;
-// $font-family-base: 'Syne', sans-serif;
+$font-family-base: 'Lato', sans-serif;
+// Your custom variables
+// Rest of your Bootstrap SCSS code
+// Change #007bff to the desired text color
 
-// $theme-colors: (
-//   "primary": $primary,
-//   "primary-opacity-8": $primary-opacity-8,
-//   "gray": $gray,
-//   "sale": $sale
-// );
+// Rest of your Bootstrap SCSS code
 
-// // Create your own map
-// $custom-color: (
-//   "icon-background": rgba(127, 24, 127, 0.2)
-// );
-
-// // Merge maps
-// $theme-colors: map-merge($theme-colors, $custom-color);
-
-
-// $utilities: (
-//   "rounded": (
-//     property: border-radius,
-//     class: rounded,
-//     values: (
-//       null: 1rem,
-//       circle: 50%
-//     )
-//   )
-// );
-
+// $font-size-base: 1.3125rem;
+// Include Bootstrap
 @import "./bootstrap/scss/bootstrap";
 
 // Add custom code after this
@@ -41,7 +26,6 @@
 /* Custom Styles for Your WordPress Theme */
 body {
     // font-family: 'Your Preferred Font', sans-serif;
-    line-height: 1.6;
 }
 
 /* Header */
@@ -49,35 +33,245 @@ header {
     color: #fff;
 }
 
+.highlight {
+    background-color: $primary;
+    color: #fff;
+
+}
+
 /* Navigation */
 .navbar {
     padding: 15px 0;
 }
 
+.tiny-text {
+    font-size: 0.75rem;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 52px;
+}
+
+.btn-primary {
+    color: white !important;
+    font-weight: 600;
+}
+
 /* Hero Section */
+
+/* Add rounded corners to the navbar */
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    z-index: 1000;
+    padding: 30px 30px 0px;
+
+    .navbar {
+        background: rgba(252, 189, 215, 0.2);
+        height: 60px;
+        width: 100%;
+        max-width: 1700px;
+        margin: auto;
+        padding: 8px 0px !important;
+        align-items: center;
+        border-radius: 50px;
+
+    }
+}
+
+/* Style the navigation links */
+.site-header .navbar-nav a {
+    padding: 10px 15px;
+}
+
+/* Add a shadow to the navbar for a floating effect */
+.site-header .navbar.fixed-top {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+//  Front - page
+
+
+
+
 .hero {
     padding: 100px 0;
+    color: #ffffff;
+    position: relative;
+    // height: 60vh;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, $primary, $secondary);
+        background-size: 400% 400%;
+        animation: aurora 15s ease infinite;
+    }
+
+    .content,
+    .portfolio {
+        z-index: 2;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 3.6rem;
+        letter-spacing: -0.03rem;
+
+        @include media-breakpoint-up(md) {
+            font-size: 74px;
+            font-weight: 400;
+            margin-bottom: 76px;
+        }
+
+    }
+
+    .hero-subtitle {
+        line-height: 1.44rem;
+        letter-spacing: normal;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+    }
+
+    .lead {
+        font-size: 9px;
+    }
 }
 
-.hero-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+@keyframes aurora {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 100% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
+
+
 
 /* About Section */
 #about {
     padding: 80px 0;
+
+    h2 {
+        font-size: 46px;
+        line-height: 52px;
+
+        span {
+            color: #00000040;
+        }
+    }
+
+    .trust-text {
+        font-size: 3rem;
+        padding-right: 6rem;
+        font-weight: 100;
+        font-family: 'Archivo Narrow', sans-serif;
+        color: #00000040;
+        line-height: 57.6px;
+    }
+
+    .trust-factors {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 2rem;
+        padding-left: 3px;
+
+        @include media-breakpoint-up(md) {
+            grid-column-gap: 8rem;
+            grid-row-gap: 5rem;
+        }
+
+        .text-start {
+            border-left: 2px solid;
+            border-image: linear-gradient(to bottom, $primary, $secondary);
+            border-image-slice: 1; // Ensure the entire border is covered
+            padding-left: 10px; // Adjust as needed
+        }
+    }
+
+    .larger-text {
+        font-size: 40px;
+        line-height: 44px;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    .smaller-text {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+    }
 }
 
 /* Services Section */
 #services {
-    padding: 80px 0;
+
+    .featured-services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 2rem;
+        // padding: 1rem;
+
+        @include media-breakpoint-up(md) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 1rem;
+        }
+    }
+
+    .card {
+        border-radius: 0.5rem;
+        border: 0 solid #e5e7eb;
+        box-shadow: 0px 8px 48px #eee, 0px 4px 8px rgba(66, 71, 76, .06), 0px 0px 1px rgba(66, 71, 76, .48);
+
+        i {
+            margin-bottom: 1.5rem !important;
+        }
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+
+
+    .card-body a {
+        padding-left: 0 !important;
+    }
 }
 
 /* Website Process Section */
@@ -89,21 +283,59 @@ header {
 /* Unique Features Section */
 #unique-features {
     padding: 80px 0;
+
+    h4 {
+        font-weight: 700;
+    }
 }
 
 /* Testimonials Section */
 #testimonials {
-    padding: 80px 0;
+    padding-bottom: 80px;
+
+    img {
+        height: 150px;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    .review {
+        font-size: 46px;
+        line-height: 52px;
+    }
+
+    .company {
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 700;
+    }
+
+    .position {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 /* Call to Action Section */
 #cta {
     padding: 60px 0;
+
+    .btn {
+        color: $secondary !important;
+    }
 }
 
 /* FAQ Section */
 #faq {
-    padding: 80px 0;
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    .accordion-header {
+        font-size: 20px;
+        line-height: 24px;
+    }
 }
 
 /* Blog Section */
