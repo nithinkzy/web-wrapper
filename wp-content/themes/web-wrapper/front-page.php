@@ -12,6 +12,28 @@
  *
  * @package pawsgang
  */
+// Add custom content to the head
+function custom_meta_tags()
+{
+	// Output your custom meta tags
+	echo '<meta name="description" content="Discover the power of Web-Wrapper! Affordable web solutions for businesses worldwide. Improve visibility, achieve growth, and stand out with our expert services.">';
+	echo '<meta name="keywords" content="web solutions, online presence, affordable websites, business growth, expert services">';
+}
+
+// Hook into the wp_head action to add custom meta tags
+add_action('wp_head', 'custom_meta_tags');
+
+// Modify the document title
+function custom_document_title_parts($title_parts)
+{
+	// Customize the title based on the current page
+	$title_parts['title'] = "Web-Wrapper | Elevate Your Online Presence";
+
+	return $title_parts;
+}
+
+// Hook into the document_title_parts filter to modify the title
+add_filter('document_title_parts', 'custom_document_title_parts');
 
 get_header();
 ?>
@@ -20,14 +42,14 @@ get_header();
 <main id="primary" class="site-main">
 
 
-	<section class="hero">
+	<section class="hero gradient-bg">
 		<div class="container pt-5 ">
 			<div class="row d-flex align-items-center">
 				<div class="content col-lg-6 col-md-12 d-flex flex-column ">
-					<h1 class="hero-title mb-3 mb-md-5">We Believe <br> Every Business <br> Deserves a Website</h1>
-					<p class="hero-subtitle mb-5">Building Affordable and Local Websites: <br> Your Best Choice for Small Business Success</p>
+					<h1 class="hero-title mb-4 mb-md-5">We Believe <br> Every Business <br> Deserves a Website</h1>
+					<p class="hero-subtitle mb-3">Building Affordable and Local Websites: <br> Your Best Choice for Small Business Success</p>
 					<div class="">
-						<a href="#consultation" class="btn btn-primary btn-lg mb-5">Request Free Consultation</a>
+						<a href="#consultation" class="btn btn-primary btn-sm btn-lg mb-5">Request Free Consultation</a>
 						<!-- <p class="text-small lead ps-2">no hidden catches, just affordable solutions for your needs.</p> -->
 					</div>
 
@@ -75,13 +97,13 @@ get_header();
 						</div>
 					</div>
 					<div class="d-flex justify-content-between align-items-center py-3">
-						<p class="lead m-0">Latest Works </p>
+						<p class=" m-0">Our Latest Works </p>
 						<div class="d-flex gap-2">
-							<a class="pe-3" href="#testimonialCarousel" role="button" data-bs-slide="prev">
+							<a class="pe-3" href="#portfolio-carousel" role="button" data-bs-slide="prev">
 								<i class="fa-solid fa-circle-chevron-left display-5"></i>
 								<span class="visually-hidden">Previous</span>
 							</a>
-							<a class="" href="#testimonialCarousel" role="button" data-bs-slide="next">
+							<a class="" href="#portfolio-carousel" role="button" data-bs-slide="next">
 								<i class="fa-solid fa-circle-chevron-right display-5"></i>
 								<span class="visually-hidden">Next</span>
 							</a>
@@ -100,7 +122,7 @@ get_header();
 					<p class="trust-text">"With Web-Wrapper, it's like having a helpful friend to guide you through the process.<span class="highlight"> You don't need to be tech-savvy;</span> we're here to make it easy for you."</p>
 				</div>
 				<div class="col-12 col-lg-7">
-					<h2 class="mb-5 ">Discover why businesses trust Web-Wrapper <br><span> — from idea to online excellence.</span></h2>
+					<h2 class="mb-5 ">Discover why businesses trust web-wrapper <br><span> — from idea to online excellence.</span></h2>
 
 					<div class="row trust-factors py-4">
 						<!-- Item 1: 5+ Years Experience -->
@@ -155,9 +177,9 @@ get_header();
 							<h4 class="card-title">Design & Development</h4>
 							<p class="card-text tiny-text">Crafting visually stunning, user-friendly websites with responsive design and integrated local SEO.</p>
 						</div>
-						<div>
+						<!-- <div>
 							<a href="#design-development" class="btn btn-link">Learn More</a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -170,9 +192,9 @@ get_header();
 							<h4 class="card-title">Website Revamp</h4>
 							<p class="card-text tiny-text">Breathe new life into outdated websites, making them modern and functional.</p>
 						</div>
-						<div>
+						<!-- <div>
 							<a href="#website-revamp" class="btn btn-link">Learn More</a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -185,9 +207,9 @@ get_header();
 							<h4 class="card-title">Website Maintenance</h4>
 							<p class="card-text tiny-text">Ongoing services to keep your website up-to-date and running smoothly.</p>
 						</div>
-						<div>
+						<!-- <div>
 							<a href="#website-maintenance" class="btn btn-link">Learn More</a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -202,7 +224,7 @@ get_header();
 							</p>
 						</div>
 						<div>
-							<a href="#why-choose-us" class="btn btn-link">Contact us</a>
+							<a href="/contact" class="btn btn-link">Contact us</a>
 						</div>
 					</div>
 				</div>
@@ -216,12 +238,12 @@ get_header();
 
 
 	<section id="website-process" class="text-center">
-		<div class="container">
+		<div class="container py-5">
 			<!-- Main Title and Subtitle -->
 			<div class="row mb-5 text-start text-md-center">
 				<div class="col ">
-					<h2 class="mb-3">How Web-Wrapper can help</h2>
-					<p class="lead col-12 col-lg-6 mx-auto">Getting your website up and running is an uncomplicated process with us. <br> We're here to guide you every step of the way.</p>
+					<h2 class="mb-3">Web-Wrapper's 3 Steps to Success</h2>
+					<p class="lead col-12  mx-auto">Getting your website up and running is an uncomplicated process with us. <br> We're here to guide you every step of the way.</p>
 				</div>
 			</div>
 
@@ -252,8 +274,8 @@ get_header();
 			<!-- CTA and Additional Text -->
 			<div class="row">
 				<div class="col ">
-					<a href="#contact" class="btn btn-primary btn-lg">Let's Plan</a>
-					<p class="mx-auto mt-3 col-12 col-md-8 tiny-text">Contact us today for a free consultation. Our experts will guide you through identifying and addressing your website needs, ensuring you're on the right path to a robust online presence for your business.</p>
+					<a href="/contact" class="btn btn-primary btn-lg">Let's Plan</a>
+					<!-- <p class="mx-auto mt-3 col-12 col-md-8 tiny-text">Contact us today for a free consultation. Our experts will guide you through identifying and addressing your website needs, ensuring you're on the right path to a robust online presence for your business.</p> -->
 				</div>
 			</div>
 		</div>
@@ -266,19 +288,19 @@ get_header();
 
 
 
-	<section id="unique-features" class="mt-md-5">
-		<div class="container">
+	<section id="unique-features">
+		<div class="container py-5">
 			<!-- Main Title and Subtitle -->
 			<div class="row mb-4">
 				<div class="col">
-					<h2 class="fw-bold mb-3">Unleash Your Potential with Our Distinctive Services</h2>
+					<h2 class="mb-3">Elevate Your Online Presence <br> with Our Exclusive Services</h2>
 					<p class="lead">Discover what sets us apart and propels your online presence to new heights.</p>
 				</div>
 			</div>
 			<!-- Services and Image Carousel Row -->
 			<div class="row align-items-center py-4">
 				<!-- Services on the Left -->
-				<div class="col-md-6 d-flex flex-column justify-items-between gap-5">
+				<div class="col-md-12 col-lg-7 col-xl-6 d-flex flex-column justify-items-between ">
 					<div>
 
 						<div class="mb-5">
@@ -303,12 +325,12 @@ get_header();
 
 					<!-- CTA to Visit More Services -->
 					<div>
-						<a href="#services-page" class="btn btn-lg btn-primary w-100">View All Services</a>
+						<a href="/services" class="btn btn-lg btn-primary w-100">View All Services</a>
 					</div>
 				</div>
 
 				<!-- Image Carousel on the Right -->
-				<div class="col-md-6 d-none d-md-block">
+				<div class="col-md-6 d-none d-xl-block">
 					<div id="service-carousel" class="carousel slide" data-bs-ride="carousel">
 						<div class="carousel-inner">
 							<!-- Image 1 -->
@@ -327,11 +349,11 @@ get_header();
 
 
 
-	<section id="testimonials" class="mt-md-5">
-		<div class="container">
+	<section id="testimonials">
+		<div class="container py-5">
 			<!-- Main Title and Subtitle -->
 			<div class="row mb-5 pb-4">
-				<div class="col-12 col-md-6 mx-auto">
+				<div class="col-12 col-lg-8 mx-auto">
 					<h2 class="fw-bold text-start text-md-center">
 						<i class="fa-solid fa-bullhorn d-none d-md-block"></i>
 						<br>
@@ -342,62 +364,80 @@ get_header();
 					<!-- <p class="lead">Getting your website up and running is an uncomplicated process with Web-Wrapper. We're here to guide you every step of the way, and you don't need to be tech-savvy.</p> -->
 				</div>
 			</div>
-			<div id="testimonialCarousel" class="carousel slide py-5" data-ride="carousel">
+			<div id="testimonialCarousel" class="carousel slide py-xl-5" data-ride="carousel">
 				<div class="carousel-inner">
 
-					<!-- Testimonial 1 -->
-					<div class="carousel-item active">
-						<div class="row">
-							<!-- Left Section -->
-							<div class="col-md-9">
-								<div class="star-rating">
-									<i class="fas fa-star text-warning"></i>
-									<i class="fas fa-star text-warning"></i>
-									<i class="fas fa-star text-warning"></i>
-									<i class="fas fa-star text-warning"></i>
-									<i class="fas fa-star text-warning"></i>
+					<?php
+					$args = array(
+						'post_type'      => 'testimonial',
+						'posts_per_page' => 4,
+					);
+
+					$testimonials = get_posts($args);
+
+					$active = 'active';
+
+					foreach ($testimonials as $testimonial) {
+						$review    = get_field('review', $testimonial->ID);
+						$company   = get_field('company', $testimonial->ID);
+						$name      = get_field('name', $testimonial->ID);
+						$position  = get_field('position', $testimonial->ID);
+						$image_url = get_field('image', $testimonial->ID);
+					?>
+
+						<div class="carousel-item <?php echo esc_attr($active); ?>">
+							<div class="row justify-content-xl-between align-items-xl-center">
+								<div class="col-12 col-xl-7">
+									<div class="star-rating">
+										<i class="fas fa-star text-warning"></i>
+										<i class="fas fa-star text-warning"></i>
+										<i class="fas fa-star text-warning"></i>
+										<i class="fas fa-star text-warning"></i>
+										<i class="fas fa-star text-warning"></i>
+									</div>
+									<p class="review mb-5"><?php echo esc_html($review); ?></p>
 								</div>
-								<p class="review mb-5">"Web-Wrapper transformed our online presence. Their expertise and dedication are commendable."</p>
-								<!-- 5 Golden Stars -->
-
-								<p class="company mb-3">XYZ Solutions</p>
-								<p class="position">John Doe - CEO</p>
-							</div>
-
-							<!-- Right Section -->
-							<div class="col-md-3">
-								<img src="<?php echo get_template_directory_uri() . '/img/clients/person-1.jpg' ?>" alt="John Doe" class="img-fluid ">
+								<div class="col-12 col-xl-4 d-flex justify-content-start gap-3 align-items-center">
+									<img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($name); ?>" class="img-fluid">
+									<div class="col">
+										<p class="company m-0"><?php echo esc_html($company); ?></p>
+										<p class="position m-0"><?php echo esc_html($name); ?> - <span class="fw-bold"><?php echo esc_html($position); ?></span></p>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
 
+					<?php
+						$active = ''; // Remove 'active' class after the first iteration
+					}
+					?>
 
 				</div>
 
+
 			</div>
 
-			<div class="d-flex justify-content-between align-items-center py-3">
-				<!-- <p class="lead m-0">Latest Works </p> -->
-				<div class="d-flex gap-2">
-					<a class="pe-3" href="#testimonialCarousel" role="button" data-bs-slide="prev">
-						<i class="fa-solid fa-circle-chevron-left display-5"></i>
-						<span class="visually-hidden">Previous</span>
-					</a>
-					<a class="" href="#testimonialCarousel" role="button" data-bs-slide="next">
-						<i class="fa-solid fa-circle-chevron-right display-5"></i>
-						<span class="visually-hidden">Next</span>
-					</a>
-				</div>
+			<!-- <p class="lead m-0">Latest Works </p> -->
+			<div class="d-flex gap-2 justify-content-end py-3">
+				<a class="pe-3" href="#testimonialCarousel" role="button" data-bs-slide="prev">
+					<i class="fa-solid fa-circle-chevron-left display-5"></i>
+					<span class="visually-hidden">Previous</span>
+				</a>
+				<a class="" href="#testimonialCarousel" role="button" data-bs-slide="next">
+					<i class="fa-solid fa-circle-chevron-right display-5"></i>
+					<span class="visually-hidden">Next</span>
+				</a>
 			</div>
+		</div>
 		</div>
 	</section>
 
 
-	<section id="cta" class="bg-primary text-white text-center py-5">
+	<section id="cta" class="bg-primary text-white text-center py-5 gradient-bg">
 		<div class="container py-5">
 			<h2 class="fw-bold mb-3 mb-md-2">Unlock the Magic of Online Success.</h2>
 			<p class="lead mb-4 mb-5">Take the first step towards transforming your online presence. Your business deserves the magic of action.</p>
-			<a href="#contact" class="btn btn-light btn-lg">Start Now</a>
+			<a href="/contact" class="btn btn-light btn-lg">START NOW</a>
 		</div>
 	</section>
 
@@ -604,7 +644,7 @@ get_header();
 
 
 
-	<section class="blog-section">
+	<section class="blog-section d-none">
 		<div class="container mb-5 ">
 			<div class="row">
 				<div class="d-flex mb-5 justify-content-between align-items-center">
@@ -667,51 +707,6 @@ get_header();
 
 
 </main>
-
-
-<footer class="bg-dark text-light py-5">
-	<div class="container">
-		<div class="row justify-content-around">
-			<!-- Logo and Slogan -->
-			<div class="col-md-4">
-				<img src="your-logo.png" alt="Your Logo" class="img-fluid mb-3">
-				<p class="text-muted">Empowering Businesses with Affordable Websites</p>
-			</div>
-
-			<!-- Quick Links -->
-			<div class="col-md-4">
-				<h3 class="text-warning">help@web-wrapper.com</h3>
-				<p class="text-muted">Click to open in your mail client or save it for later.</p>
-			</div>
-
-			<!-- Free Consultation Form -->
-			<div class="col-md-3 text-end">
-				<h5 class="mb-5">Interested in our services? </h5>
-				<p class="mb-3">Provide your contact information, and we'll reach out for a free consultation.</p>
-
-				<form action="#" method="post" class="ms-auto">
-					<div class="mb-3">
-						<input type="text" class="form-control" placeholder="Your Email/Phone Number" aria-label="Your Email/Phone" required>
-					</div>
-					<button class="btn btn-primary" type="submit">Get Free Consultation</button>
-				</form>
-			</div>
-		</div>
-
-		<!-- Social Icons -->
-		<div class="row mt-4">
-			<div class="col-md-12">
-				<h5>Connect with Us</h5>
-				<!-- Add your social icons with links here -->
-				<a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
-				<a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
-				<a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
-			</div>
-		</div>
-	</div>
-</footer>
-
 
 
 <?php

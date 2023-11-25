@@ -48,7 +48,7 @@
 						'container' => 'div',
 						'container_class' => 'collapse navbar-collapse',
 						'container_id' => 'navbarNav',
-						'menu_class' => 'navbar-nav ml-auto',
+						'menu_class' => 'navbar-nav ms-auto',
 						'fallback_cb' => '__return_false',
 						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 						'depth' => 2,

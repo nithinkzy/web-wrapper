@@ -5,20 +5,30 @@
 // $sale: rgba(167, 4, 4, 0.8);
 
 $primary: #3cb816;
-$secondary: #1a1c1f;
-// font-family: 'Lato', sans-serif;
-// font-family: 'Montserrat', sans-serif;
-$headings-font-family: 'Montserrat', sans-serif;
+$secondary: #222222;
+$body-bg: #f8f8f8;
+$gray-bg: #e9e9e9;
+$custom-dark-bg: #222222;
+// font-family: 'Inter', sans-serif;
+// font-family: 'Libre Baskerville', serif;
+$headings-font-family: 'Libre Baskerville', serif;
 // $headings-font-weight: 800;
-$font-family-base: 'Lato', sans-serif;
+$font-family-base: 'Inter', sans-serif;
 // Your custom variables
 // Rest of your Bootstrap SCSS code
 // Change #007bff to the desired text color
 
 // Rest of your Bootstrap SCSS code
-
+$input-height: 35px;
+$input-font-size: 14px;
+$label-top-position: 18px;
+$label-left-position: 20px;
 // $font-size-base: 1.3125rem;
-// Include Bootstrap
+
+// Custom Bootstrap variables
+
+// Override Bootstrap variables
+
 @import "./bootstrap/scss/bootstrap";
 
 // Add custom code after this
@@ -26,6 +36,15 @@ $font-family-base: 'Lato', sans-serif;
 /* Custom Styles for Your WordPress Theme */
 body {
     // font-family: 'Your Preferred Font', sans-serif;
+}
+
+.post,
+.page {
+    margin: 0;
+}
+
+.bg-dark {
+    background-color: $custom-dark-bg !important;
 }
 
 /* Header */
@@ -42,20 +61,72 @@ header {
 /* Navigation */
 .navbar {
     padding: 15px 0;
+
+    .nav-link {
+        color: #fff !important;
+    }
+
+    .active a {
+        color: $primary !important;
+    }
+}
+
+.navbar-nav {
+    column-gap: 4rem;
 }
 
 .tiny-text {
     font-size: 0.75rem;
 }
 
+h1,
 h2 {
-    font-size: 46px;
-    line-height: 52px;
+    font-size: 40px;
+    line-height: 48px;
+
+    @include media-breakpoint-up(md) {
+        font-size: clamp(28px, 18.1408450704px + 1.9718309859vw, 56px);
+        line-height: 52px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        // font-size: 4rem;
+        // font-weight: 700;
+        // line-height: 4.8rem;
+        // letter-spacing: -0.03rem;
+    }
+
+  
+
+    span {
+        font-size: 1rem;
+    }
+}
+
+img {
+    border-radius: 16px !important;
+
 }
 
 .btn-primary {
     color: white !important;
-    font-weight: 600;
+    background: linear-gradient(232deg, #3cb816, #009400, #007100, #004f00, #003000);
+    background-size: 300% 300%;
+    animation: gradient-animation 10s ease infinite;
+
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
 }
 
 
@@ -69,6 +140,26 @@ h2 {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
+.gradient-bg {
+    background: linear-gradient(232deg, #3cb816, #009400, #007100, #004f00, #003000);
+    background-size: 300% 300%;
+    animation: gradient-animation 10s ease infinite;
+
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+}
 
 // Hero Section
 .hero {
@@ -78,28 +169,13 @@ h2 {
     overflow: hidden;
 
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(45deg, $primary, $secondary);
-        background-size: 400% 400%;
-        animation: aurora 15s ease infinite;
-    }
-
     .content,
     .portfolio {
         z-index: 2;
     }
 
     .hero-title {
-        font-size: 3rem;
-        font-weight: 700;
-        line-height: 3.6rem;
-        letter-spacing: -0.03rem;
+
 
         @include media-breakpoint-up(md) {
             font-size: 4rem;
@@ -119,9 +195,9 @@ h2 {
     }
 
     .hero-subtitle {
-        line-height: 1.44rem;
+        line-height: 21.6PX;
         letter-spacing: normal;
-        font-size: 1.2rem;
+        font-size: 18PX;
 
         @include media-breakpoint-up(md) {
             font-size: 2rem;
@@ -135,6 +211,16 @@ h2 {
         }
     }
 
+    #portfolio-carousel {
+        img {
+            // opacity: 0.8;
+        }
+    }
+
+    .btn-primary {
+        background: #fff !important;
+        color: #000 !important;
+    }
 
 }
 
@@ -260,9 +346,13 @@ h2 {
     }
 
     .card {
-        border-radius: 0.5rem;
-        border: 0 solid #e5e7eb;
-        box-shadow: 0px 8px 48px #eee, 0px 4px 8px rgba(66, 71, 76, .06), 0px 0px 1px rgba(66, 71, 76, .48);
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.32);
 
         i {
             margin-bottom: 1.5rem !important;
@@ -300,45 +390,73 @@ h2 {
 
 /* Website Process Section */
 #website-process {
-    background-color: #f8f9fa;
-    padding: 80px 0;
+    background-color: $gray-bg;
 }
 
 /* Unique Features Section */
 #unique-features {
-    padding: 80px 0;
 
     h4 {
-        font-weight: 700;
+        // font-weight: 700;
     }
 }
 
 /* Testimonials Section */
 #testimonials {
-    padding-bottom: 80px;
 
     img {
-        height: 150px;
+        height: 75px;
+        border-radius: 50%;
     }
 
     h2 {
         font-size: 3.5rem;
     }
 
+    .carousel-item .row {
+        height: 250px;
+    }
+
     .review {
-        font-size: 46px;
-        line-height: 52px;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
     }
 
     .company {
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 1.2rem;
+        line-height: 1.44rem;
         font-weight: 700;
     }
 
     .position {
         font-size: 16px;
         line-height: 24px;
+    }
+
+    @include media-breakpoint-up(md) {
+        .review {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+        }
+
+        .company {
+            font-size: 1.2rem;
+            line-height: 1.44rem;
+            font-weight: 700;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .review {
+            font-size: 20px;
+            line-height: 24px;
+            padding-top: 2rem;
+        }
+
+        img {
+            height: 150px;
+        }
+
     }
 }
 
@@ -372,6 +490,15 @@ footer {
     background-color: #343a40;
     color: #fff;
     padding: 80px 0;
+
+    .email {
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            border-left: 1px solid #bababa3b;
+            border-right: 1px solid #bababa3b;
+        }
+    }
 }
 
 /* Footer Quick Links */
@@ -382,4 +509,136 @@ footer a {
 /* Footer Free Consultation Form */
 footer form {
     max-width: 300px;
+}
+
+.services-page {
+    .card {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.32);
+        min-height: 250px;
+
+        i {
+            margin-bottom: 1.5rem !important;
+        }
+    }
+}
+
+.contact-us {
+    .lead {
+        font-size: 32px;
+        line-height: 46px;
+        color: rgba(0, 0, 0, 0.2509803922);
+    }
+
+    .floating-label-input {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .floating-label-input input,
+    textarea {
+        width: 100%;
+        height: 100%;
+        padding-top: 33px !important;
+        outline: 0;
+        border: 0 !important;
+        border-bottom: 1px solid #bababa3b !important;
+        background: 0 0;
+        box-shadow: none;
+        font-size: 26px;
+        color: #000;
+        transition: .35s ease-out;
+        border-radius: 0 !important;
+    }
+
+    .floating-label-input label {
+        position: absolute;
+        pointer-events: none;
+        left: $label-left-position;
+        top: $label-top-position;
+        transition: 0.2s ease all;
+    }
+
+    .floating-label-input input:focus~label,
+    .floating-label-input textarea:focus~label,
+    .floating-label-input input:not(:focus):valid~label,
+    .floating-label-input textarea:not(:focus):valid~label {
+        top: 8px;
+        font-size: 11px;
+    }
+}
+
+.portfolio-page {
+    // Override Bootstrap variables
+    $link-color: $primary;
+
+    // Your custom variables
+    $underline-height: 4px;
+    $link-hover-color: darken($primary, 10%);
+    // Include Bootstrap
+
+    // Additional custom styles
+    a {
+        text-decoration: none; // Remove default underline
+        border-bottom: $underline-height solid transparent; // Add custom underline
+        transition: border-bottom 0.3s, font-weight 0.3s; // Add transition effect
+        font-weight: normal; // Set initial font weight
+    }
+
+    a:hover {
+        border-bottom: $underline-height solid $link-hover-color; // Change underline color on hover
+        transition: all 0.3s ease;
+    }
+
+    a:focus,
+    a:active {
+        color: $primary !important;
+
+    }
+
+    .portfolio {
+        /* From https://css.glass */
+        background: #222222;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+
+
+
+        .content {
+            padding: clamp(24px, 3vw, 64px);
+
+        }
+
+        h3 {
+            font-size: clamp(30px, 20.8450704225px + 1.8309859155vw, 56px)
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        a {
+            font-size: 1.6em;
+        }
+
+        img {
+            padding: 2rem 0rem 0rem 0rem;
+            margin-bottom: -10px;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        }
+    }
+}
+
+
+.why-part {
+    background-color: $gray-bg;
 }
