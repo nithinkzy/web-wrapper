@@ -240,8 +240,6 @@ img {
     padding: 80px 0;
 
     h2 {
-
-
         span {
             color: #00000040;
         }
@@ -686,4 +684,41 @@ footer form {
 
         }
     }
+}
+
+.about-page {
+    h2 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .values {
+        gap: 2rem;
+
+
+        i {
+            font-size: 2rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .values {
+            gap: 0;
+
+            i {
+                font-size: 2rem;
+            }
+
+            .lead {
+                font-size: 13px;
+                font-weight: 300;
+                line-height: 15.6px;
+            }
+        }
+    }
+
 }
