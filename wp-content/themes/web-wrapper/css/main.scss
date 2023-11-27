@@ -55,7 +55,16 @@ body {
 
 /* Header */
 header {
-    color: #fff;
+
+    .nav-link {
+        color: #fff !important;
+    }
+
+    .navbar-brand:hover,
+    .nav-link:hover {
+        scale: 0.9;
+        color: $primary !important;
+    }
 }
 
 .highlight {
@@ -68,9 +77,6 @@ header {
 .navbar {
     padding: 15px 0;
 
-    .nav-link {
-        color: #fff !important;
-    }
 
     .active a {
         color: $primary !important;
@@ -127,6 +133,7 @@ img {
     background: linear-gradient(232deg, #3cb816, #009400, #007100, #004f00, #003000);
     background-size: 300% 300%;
     animation: gradient-animation 10s ease infinite;
+    transition: scale 1.2s ease;
 
     @keyframes gradient-animation {
         0% {
@@ -140,6 +147,10 @@ img {
         100% {
             background-position: 0% 50%;
         }
+    }
+
+    &:hover {
+        scale: 0.9;
     }
 }
 

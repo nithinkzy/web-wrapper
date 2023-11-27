@@ -9678,8 +9678,13 @@ textarea.form-control-lg {
 }
 
 /* Header */
-header {
-  color: #fff;
+header .nav-link {
+  color: #fff !important;
+}
+header .navbar-brand:hover,
+header .nav-link:hover {
+  scale: 0.9;
+  color: #3cb816 !important;
 }
 
 .highlight {
@@ -9690,9 +9695,6 @@ header {
 /* Navigation */
 .navbar {
   padding: 15px 0;
-}
-.navbar .nav-link {
-  color: #fff !important;
 }
 .navbar .active a {
   color: #3cb816 !important;
@@ -9744,6 +9746,7 @@ img {
   background: linear-gradient(232deg, #3cb816, #009400, #007100, #004f00, #003000);
   background-size: 300% 300%;
   animation: gradient-animation 10s ease infinite;
+  transition: scale 1.2s ease;
 }
 @keyframes gradient-animation {
   0% {
@@ -9755,6 +9758,9 @@ img {
   100% {
     background-position: 0% 50%;
   }
+}
+.btn-primary:hover {
+  scale: 0.9;
 }
 
 /* Style the navigation links */

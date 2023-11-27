@@ -49,7 +49,7 @@ get_header();
 					<h1 class="hero-title mb-4 ">We Believe <br> Every Business <br> Deserves a Website</h1>
 					<p class="hero-subtitle mb-5">Building Affordable and Local Websites: <br> Your Best Choice for Small Business Success</p>
 					<div class="">
-						<a href="#consultation" class="btn btn-primary  btn-lg mb-5">Request Free Consultation</a>
+						<a href="/contact" class="btn btn-primary  btn-lg mb-5">Request Free Consultation</a>
 						<!-- <p class="text-small lead ps-2">no hidden catches, just affordable solutions for your needs.</p> -->
 					</div>
 
@@ -335,7 +335,7 @@ get_header();
 						<div class="carousel-inner">
 							<!-- Image 1 -->
 							<div class="carousel-item active">
-								<img src="<?php echo get_template_directory_uri() . '/img/steps/unique-services.jpg' ?>" class="d-block w-100" alt="Service Image 1">
+								<img src="<?php echo get_template_directory_uri() . '/img/steps/unique-services.png' ?>" class="d-block w-100" alt="Service Image 1">
 							</div>
 
 						</div>
