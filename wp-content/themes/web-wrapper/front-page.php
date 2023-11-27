@@ -46,10 +46,10 @@ get_header();
 		<div class="container pt-5 ">
 			<div class="row d-flex align-items-center">
 				<div class="content col-lg-6 col-md-12 d-flex flex-column ">
-					<h1 class="hero-title mb-4 mb-md-5">We Believe <br> Every Business <br> Deserves a Website</h1>
-					<p class="hero-subtitle mb-3">Building Affordable and Local Websites: <br> Your Best Choice for Small Business Success</p>
+					<h1 class="hero-title mb-4 ">We Believe <br> Every Business <br> Deserves a Website</h1>
+					<p class="hero-subtitle mb-5">Building Affordable and Local Websites: <br> Your Best Choice for Small Business Success</p>
 					<div class="">
-						<a href="#consultation" class="btn btn-primary btn-sm btn-lg mb-5">Request Free Consultation</a>
+						<a href="#consultation" class="btn btn-primary  btn-lg mb-5">Request Free Consultation</a>
 						<!-- <p class="text-small lead ps-2">no hidden catches, just affordable solutions for your needs.</p> -->
 					</div>
 
@@ -237,12 +237,12 @@ get_header();
 
 
 
-	<section id="website-process" class="text-center">
+	<section id="website-process">
 		<div class="container py-5">
 			<!-- Main Title and Subtitle -->
 			<div class="row mb-5 text-start text-md-center">
 				<div class="col ">
-					<h2 class="mb-3">Web-Wrapper's 3 Steps to Success</h2>
+					<h2 class="mb-3">Web-Wrapper's <br> - 3 Steps to Success</h2>
 					<p class="lead col-12  mx-auto">Getting your website up and running is an uncomplicated process with us. <br> We're here to guide you every step of the way.</p>
 				</div>
 			</div>
@@ -273,8 +273,8 @@ get_header();
 
 			<!-- CTA and Additional Text -->
 			<div class="row">
-				<div class="col ">
-					<a href="/contact" class="btn btn-primary btn-lg">Let's Plan</a>
+				<div class="col-12 col-lg-2 mx-auto ">
+					<a href="/contact" class="btn btn-primary btn-lg w-100">Let's Plan</a>
 					<!-- <p class="mx-auto mt-3 col-12 col-md-8 tiny-text">Contact us today for a free consultation. Our experts will guide you through identifying and addressing your website needs, ensuring you're on the right path to a robust online presence for your business.</p> -->
 				</div>
 			</div>
@@ -306,25 +306,25 @@ get_header();
 						<div class="mb-5">
 							<h4><i class="fas fa-camera pe-2"></i> Striking Visuals</h4>
 							<p>Stand out online with visually stunning and impactful imagery. Our photography services bring your local business to life and ensure a memorable digital presence.</p>
-							<a href="#learn-more-link-1">Learn More</a>
+							<!-- <a href="#learn-more-link-1">Learn More</a> -->
 						</div>
 
 						<div class="mb-5">
 							<h4><i class="fas fa-tools pe-2"></i> Custom Solutions</h4>
 
 							<p>Elevate efficiency with tailor-made internet applications designed specifically for your business. Streamline operations and save valuable time with our personalized solutions.</p>
-							<a href="#learn-more-link-2">Learn More</a>
+							<!-- <a href="#learn-more-link-2">Learn More</a> -->
 						</div>
 
 						<div class="mb-5">
 							<h4><i class="fab fa-whatsapp pe-2"></i> AI Whatsapp Chatbot</h4>
 							<p>Experience the future of customer interaction with our AI-driven Whatsapp Chatbot. Our chatbot studies your business, engages with customers, and provides personalized responses, enhancing your customer service 24/7.</p>
-							<a href="#learn-more-link-3">Learn More</a>
+							<!-- <a href="#learn-more-link-3">Learn More</a> -->
 						</div>
 					</div>
 
 					<!-- CTA to Visit More Services -->
-					<div>
+					<div class="col-12 col-lg-4 mx-auto">
 						<a href="/services" class="btn btn-lg btn-primary w-100">View All Services</a>
 					</div>
 				</div>
@@ -437,7 +437,9 @@ get_header();
 		<div class="container py-5">
 			<h2 class="fw-bold mb-3 mb-md-2">Unlock the Magic of Online Success.</h2>
 			<p class="lead mb-4 mb-5">Take the first step towards transforming your online presence. Your business deserves the magic of action.</p>
-			<a href="/contact" class="btn btn-light btn-lg">START NOW</a>
+			<div class="col-12 col-lg-4 mx-auto">
+				<a href="/contact" class="btn btn-light btn-lg w-100">Start Now</a>
+			</div>
 		</div>
 	</section>
 

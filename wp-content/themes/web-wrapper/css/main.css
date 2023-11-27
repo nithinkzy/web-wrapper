@@ -9667,6 +9667,12 @@ textarea.form-control-lg {
   margin: 0;
 }
 
+.lead {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
 .bg-dark {
   background-color: #222222 !important;
 }
@@ -9700,6 +9706,11 @@ header {
 .tiny-text {
   font-size: 0.75rem;
 }
+@media (min-width: 768px) {
+  .tiny-text {
+    font-size: 1rem;
+  }
+}
 
 h1, .h1,
 h2,
@@ -9711,14 +9722,17 @@ h2,
   h1, .h1,
   h2,
   .h2 {
-    font-size: clamp(28px, 18.1408450704px + 1.9718309859vw, 56px);
-    line-height: 52px;
+    font-size: 55px;
+    line-height: 66px;
   }
 }
-h1 span, .h1 span,
-h2 span,
-.h2 span {
-  font-size: 1rem;
+span {
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  span {
+    font-size: 2rem;
+  }
 }
 
 img {
@@ -9779,44 +9793,15 @@ img {
 .hero .portfolio {
   z-index: 2;
 }
-@media (min-width: 768px) {
-  .hero .hero-title {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 76px;
-    line-height: 4.8rem;
-    letter-spacing: -0.04rem;
-  }
-}
-@media (min-width: 992px) {
-  .hero .hero-title {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 4.8rem;
-    letter-spacing: -0.03rem;
-  }
-}
-.hero .hero-subtitle {
-  line-height: 21.6PX;
-  letter-spacing: normal;
-  font-size: 18PX;
-}
-@media (min-width: 768px) {
-  .hero .hero-subtitle {
-    font-size: 2rem;
-    line-height: 2.4rem;
-  }
-}
-@media (min-width: 992px) {
-  .hero .hero-subtitle {
-    line-height: 1.44rem;
-    letter-spacing: normal;
-    font-size: 1.2rem;
-  }
-}
 .hero .btn-primary {
   background: #fff !important;
   color: #000 !important;
+}
+@media (min-width: 768px) {
+  .hero .hero-subtitle {
+    font-size: 25px;
+    line-height: 30px;
+  }
 }
 
 @keyframes aurora {
@@ -9839,10 +9824,6 @@ img {
 /* About Section */
 #about {
   padding: 80px 0;
-}
-#about h2, #about .h2 {
-  font-size: 46px;
-  line-height: 52px;
 }
 #about h2 span, #about .h2 span {
   color: rgba(0, 0, 0, 0.2509803922);
@@ -9868,15 +9849,14 @@ img {
   padding-left: 10px;
 }
 #about .larger-text {
-  font-size: 2rem;
-  line-height: 2.4rem;
+  font-size: 20px;
+  line-height: 24px;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 10px;
 }
 #about .smaller-text {
-  font-size: 1rem;
-  line-height: 1.2rem;
-  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
 }
 @media (min-width: 768px) {
   #about .larger-text {
@@ -9919,7 +9899,6 @@ img {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.32);
 }
@@ -9950,6 +9929,12 @@ img {
 /* Website Process Section */
 #website-process {
   background-color: #e9e9e9;
+  text-align: text-center;
+}
+@media (min-width: 768px) {
+  #website-process {
+    text-align: text-start;
+  }
 }
 
 /* Unique Features Section */
@@ -9958,15 +9943,13 @@ img {
   height: 75px;
   border-radius: 50%;
 }
-#testimonials h2, #testimonials .h2 {
-  font-size: 3.5rem;
-}
-#testimonials .carousel-item .row {
-  height: 250px;
+#testimonials .carousel-item {
+  height: 350px !important;
 }
 #testimonials .review {
-  font-size: 1.5rem;
-  line-height: 1.8rem;
+  font-size: 20px;
+  line-height: 24px;
+  padding-top: 20px;
 }
 #testimonials .company {
   font-size: 1.2rem;
@@ -9978,10 +9961,6 @@ img {
   line-height: 24px;
 }
 @media (min-width: 768px) {
-  #testimonials .review {
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-  }
   #testimonials .company {
     font-size: 1.2rem;
     line-height: 1.44rem;
@@ -9990,8 +9969,6 @@ img {
 }
 @media (min-width: 1200px) {
   #testimonials .review {
-    font-size: 20px;
-    line-height: 24px;
     padding-top: 2rem;
   }
   #testimonials img {
@@ -10033,6 +10010,12 @@ footer .email {
 }
 @media (min-width: 768px) {
   footer .email {
+    text-align: start;
+  }
+}
+@media (min-width: 1200px) {
+  footer .email {
+    text-align: center;
     border-left: 1px solid rgba(186, 186, 186, 0.231372549);
     border-right: 1px solid rgba(186, 186, 186, 0.231372549);
   }
@@ -10053,13 +10036,16 @@ footer form {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.32);
   min-height: 250px;
 }
 .services-page .card i {
   margin-bottom: 1.5rem !important;
+}
+.services-page .accordion-button {
+  font-size: 12px;
+  line-height: 14.4px;
 }
 
 .contact-us .lead {
@@ -10145,4 +10131,37 @@ footer form {
 
 .why-part {
   background-color: #e9e9e9;
+}
+.why-part .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+  text-align: start;
+}
+.why-part .grid i {
+  font-size: 1.5rem;
+}
+.why-part .grid h4, .why-part .grid .h4 {
+  font-size: 12px;
+}
+.why-part .grid p {
+  font-size: 9px;
+}
+@media (min-width: 768px) {
+  .why-part .grid i {
+    font-size: 2rem;
+  }
+  .why-part .grid h4, .why-part .grid .h4 {
+    font-size: 1.2rem;
+  }
+  .why-part .grid p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .why-part .grid {
+    grid-column-gap: 160px;
+  }
 }/*# sourceMappingURL=main.css.map */
