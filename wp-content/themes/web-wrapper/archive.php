@@ -27,7 +27,7 @@ get_header(); ?>
 	<div class="container py-5 portfolio-page">
 
 		<!-- Main Title and Subtitle -->
-		<div class="row mb-5 pb-4">
+		<div class="row  mb-5 pb-4">
 			<div class="col-12 col-lg-8 mx-auto text-center">
 				<h2 class="mb-3"><span>Portfolio</span> <br> Web-Wrapper's Digital Success Stories</h2>
 				<p class="lead">Explore Our Innovative and Impactful Projects</p>
@@ -42,9 +42,9 @@ get_header(); ?>
 				$url = get_field('url'); // Replace with your actual field name
 				$description = get_field('description'); // Replace with your actual field name
 		?>
-				<div class="row mb-5 portfolio">
+				<div class="row flex-column-reverse flex-md-row mb-5 portfolio ">
 					<div class="content col-md-6">
-						<h3 class="mb-5"><?php echo esc_html($title); ?></h3>
+						<h3 class="mb-3 mb-md-5"><?php echo esc_html($title); ?></h3>
 						<p class="mb-5"><?php echo esc_html($description); ?></p>
 						<a href="<?php echo esc_url($url); ?>" target="_blank" class="text-uppercase">VISIT <?php echo str_replace('https://', '', esc_html($url));; ?></a>
 					</div>

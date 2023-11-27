@@ -511,7 +511,7 @@ footer form {
         }
     }
 
-    .accordion-button{
+    .accordion-button {
         font-size: 12px;
         line-height: 14.4px;
     }
@@ -595,7 +595,7 @@ footer form {
         background: #222222;
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
+        // backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.3);
         color: #fff;
@@ -616,12 +616,26 @@ footer form {
         }
 
         a {
-            font-size: 1.6em;
+            font-size: 1em;
+        }
+
+
+        @include media-breakpoint-up(md) {
+
+            a {
+                font-size: 1.6em;
+            }
         }
 
         img {
-            padding: 2rem 0rem 0rem 0rem;
-            margin-bottom: -10px;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+
+            @include media-breakpoint-up(md) {
+                padding: 2rem 0rem 0rem 0rem;
+                margin-bottom: -10px;
+            }
+
             box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
         }
     }
@@ -653,19 +667,20 @@ footer form {
 
 
         @include media-breakpoint-up(md) {
-            
+
             i {
                 font-size: 2rem;
             }
-            
+
             h4 {
                 font-size: 1.2rem;
             }
-            
+
             p {
                 font-size: 1rem;
             }
         }
+
         @include media-breakpoint-up(lg) {
             grid-column-gap: 160px;
 
