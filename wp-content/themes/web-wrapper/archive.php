@@ -46,7 +46,7 @@ get_header(); ?>
 					<div class="content col-md-6">
 						<h3 class="mb-3 mb-md-5"><?php echo esc_html($title); ?></h3>
 						<p class="mb-5"><?php echo esc_html($description); ?></p>
-						<a href="<?php echo esc_url($url); ?>" target="_blank" class="text-uppercase">VISIT <?php echo str_replace('https://', '', esc_html($url));; ?></a>
+						<a href="<?php echo esc_url($url); ?>" target="_blank" class="text-uppercase">VISIT <?php echo str_replace('https://', '', esc_html($url));; ?> <svg data-v-67d7128c="" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="a-icon--arrow-north-east400 a-icon--text a-icon--no-align top-[0.05em] relative f-ui-1 ml-2 -mr-4" data-new="" aria-hidden="true" style="width: 1em; height: 1em;"><polygon data-v-67d7128c="" fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31"></polygon></svg></a>
 					</div>
 					<div class="col-md-6">
 						<img src="<?php echo esc_url($cover_image); ?>" alt="<?php echo esc_attr($title); ?>" class="img-fluid">

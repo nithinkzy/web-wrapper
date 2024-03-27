@@ -34,8 +34,24 @@ $label-left-position: 20px;
 // Add custom code after this
 
 /* Custom Styles for Your WordPress Theme */
-body {
-    // font-family: 'Your Preferred Font', sans-serif;
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
 }
 
 .post,
@@ -409,6 +425,10 @@ img {
 
     .carousel-item {
         height: 350px !important;
+
+        span {
+            font-size: 1rem;
+        }
     }
 
     .review {

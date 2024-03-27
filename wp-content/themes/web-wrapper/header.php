@@ -15,16 +15,32 @@
 <html <?php language_attributes(); ?>>
 
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-W07ECJTWFH"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-W07ECJTWFH');
+	</script>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri() . '/img/apple-touch-icon.png' ?>">
+	<link rel=" icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri() . '/img/favicon-32x32.png' ?>">
+	<link rel=" icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri() . '/img/favicon-16x16.png' ?>">
+	<link rel=" manifest" href="<?php echo get_template_directory_uri() . '/img/site.webmanifest' ?>">
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<div id="page" class="site">
+	<div id=" page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'web-wrapper'); ?></a>
 
 		<header id="masthead" class="site-header">

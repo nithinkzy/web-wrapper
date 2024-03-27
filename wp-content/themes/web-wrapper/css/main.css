@@ -9662,6 +9662,26 @@ textarea.form-control-lg {
   }
 }
 /* Custom Styles for Your WordPress Theme */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 .post,
 .page {
   margin: 0;
@@ -9951,6 +9971,9 @@ img {
 }
 #testimonials .carousel-item {
   height: 350px !important;
+}
+#testimonials .carousel-item span {
+  font-size: 1rem;
 }
 #testimonials .review {
   font-size: 20px;

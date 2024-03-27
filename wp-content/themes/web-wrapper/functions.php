@@ -154,19 +154,26 @@ function web_wrapper_scripts()
 	// Set RTL
 	wp_style_add_data('wrapper-style', 'rtl', 'replace');
 
-	// Enqueue scripts
-	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), null, true);
+	// Enqueue jquery scripts
+	wp_deregister_script('jquery'); // deregisters the default WordPress jQuery  
+	wp_register_script('jquery', ("https://code.jquery.com/jquery-3.6.0.min.js"), false);
+	wp_enqueue_script('jquery');
 
 
 
-	// wp_enqueue_script('jquery');
+	// Bootstrap
 	wp_enqueue_script('bootstrap-popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js', array('jquery'), null, true);
 	// wp_enqueue_script('bootstrap-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js', array('jquery'));
 	wp_enqueue_script('bootstrap-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js', array('jquery', 'bootstrap-popper'), null, true);
 
+	// Custom Script
+	// wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js');
+	// wp_enqueue_script('ScrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js');
+	wp_enqueue_script('lenis', 'https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js');
+	// wp_enqueue_script('split-type', 'https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js');
+	wp_enqueue_script('wrapper-script', get_template_directory_uri() . '/js/script.js');
 
-	// wp_enqueue_script('bootstrap-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js', array('jquery', 'bootstrap-popper'), null, true);
-	wp_enqueue_script('wrapper-script', get_template_directory_uri() . '/js/script.js', array('jquery', 'bootstrap-script'), null, true);
+	wp_localize_script('wrapper-script', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
 
 	// Enqueue comment reply script if needed
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -222,3 +229,46 @@ if (defined('JETPACK__VERSION')) {
 
 // Include Bootstrap NavWalker
 require_once get_template_directory() . '/bootstrap-navwalker.php';
+
+add_action('wp_ajax_process_contact_form', 'process_contact_form');
+add_action('wp_ajax_nopriv_process_contact_form', 'process_contact_form');
+
+function process_contact_form()
+{
+
+	if (isset($_POST['formData'])) {
+
+		parse_str($_POST['formData'], $form_data);
+
+		// Process your email sending logic here
+		$to = "devworldofn@gmail.com,nithinkzy@gmail.com,support@web-wrapper.com";
+		$subject = "New Contact Form Submission - " . $form_data['name'];
+		$body = "Hello,\n\n";
+		$body .= "You have received a new contact form submission with the following details:\n\n";
+		$body .= "Name: {$form_data['name']}\n";
+		$body .= "Email: {$form_data['email']}\n";
+		$body .= "Message:\n{$form_data['message']}\n\n";
+		$body .= "Please respond to the inquiry as soon as possible.\n\n";
+		$body .= "Thank you,\nYour Company Name";
+
+		// Use appropriate mail headers
+		$headers = "MIME-Version: 1.0" . "\r\n";
+		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+		$headers .= "From: Web-wrapper Contact Page <support@web-wrapper.com>";
+
+		// Send email
+		if (wp_mail($to, $subject, $body, $headers)) {
+			// Email sent successfully
+			echo "Congrats and Thanks for contacting us! We will get back to you soon.";
+		} else {
+			// Email sending failed
+			echo "Sorry, something went wrong. Please try again later.";
+		}
+	} else {
+		// If data is not received, show an error message
+		echo "Invalid data received.";
+	}
+
+	// Always exit to avoid extra output
+	wp_die();
+}

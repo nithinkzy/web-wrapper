@@ -122,7 +122,7 @@ get_header();
 					<p class="trust-text">"With Web-Wrapper, it's like having a helpful friend to guide you through the process.<span class="highlight"> You don't need to be tech-savvy;</span> we're here to make it easy for you."</p>
 				</div>
 				<div class="col-12 col-lg-7">
-					<h2 class="mb-5 ">Discover why businesses trust web-wrapper <br><span> — from idea to online excellence.</span></h2>
+					<h2 class="mb-5 reveal-type">Discover why businesses trust web-wrapper <br><span> — from idea to online excellence.</span></h2>
 
 					<div class="row trust-factors py-4">
 						<!-- Item 1: 5+ Years Experience -->
@@ -224,7 +224,9 @@ get_header();
 							</p>
 						</div>
 						<div>
-							<a href="/contact" class="btn btn-link">Contact us</a>
+							<a href="/contact" class="btn btn-link">Contact us <svg data-v-67d7128c="" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="a-icon--arrow-north-east400 a-icon--text a-icon--no-align top-[0.05em] relative f-ui-1 ml-2 -mr-4" data-new="" aria-hidden="true" style="width: 1em; height: 1em;">
+									<polygon data-v-67d7128c="" fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31"></polygon>
+								</svg></a>
 						</div>
 					</div>
 				</div>

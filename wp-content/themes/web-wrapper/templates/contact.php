@@ -4,9 +4,9 @@
  */
 function custom_meta_tags()
 {
-	// Output your custom meta tags
-	echo '<meta name="description" content="Reach out to Web-Wrapper for all your web-related needs. Contact our expert team for web design, development, SEO, and other digital solutions. Let\'s transform your online presence!">';
-	echo '<meta name="keywords" content="contact us, web design, web development, SEO, digital solutions">';
+    // Output your custom meta tags
+    echo '<meta name="description" content="Reach out to Web-Wrapper for all your web-related needs. Contact our expert team for web design, development, SEO, and other digital solutions. Let\'s transform your online presence!">';
+    echo '<meta name="keywords" content="contact us, web design, web development, SEO, digital solutions">';
 }
 
 // Hook into the wp_head action to add custom meta tags
@@ -15,10 +15,10 @@ add_action('wp_head', 'custom_meta_tags');
 // Modify the document title
 function custom_document_title_parts($title_parts)
 {
-	// Customize the title based on the current page
-	$title_parts['title'] = "Contact Us | Get in Touch with Web-Wrapper";
+    // Customize the title based on the current page
+    $title_parts['title'] = "Contact Us | Get in Touch with Web-Wrapper";
 
-	return $title_parts;
+    return $title_parts;
 }
 
 // Hook into the document_title_parts filter to modify the title
@@ -39,7 +39,7 @@ get_header();
         </div>
 
         <!-- Contact Form -->
-        <form class="col-md-8 col-lg-6 mx-auto py-5">
+        <form class="col-md-8 col-lg-6 mx-auto py-5" id="contactForm">
 
             <!-- Name Field -->
             <div class="form-group floating-label-input">
@@ -66,8 +66,10 @@ get_header();
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="w-100 btn btn-primary btn-lg ">MESSAGE NOW</button>
+            <button type="submit" class="w-100 btn btn-primary btn-lg ">Message Now</button>
         </form>
+        <!-- Display messages to the user -->
+        <div id="status"></div>
     </div>
 
 </div>
@@ -107,6 +109,38 @@ get_header();
         setTimeout(shoot, 0);
         setTimeout(shoot, 100);
         setTimeout(shoot, 200);
+        // Handle form submission
+        $("#contactForm").submit(function(e) {
+            e.preventDefault();
+
+            // Get form data
+            var formData = $(this).serialize();
+            // Reference to the Bootstrap alert div
+            var alertDiv = $("#status");
+            // Send AJAX request
+            $.ajax({
+                type: "POST",
+                url: ajax_object.ajax_url,
+                data: {
+                    action: 'process_contact_form',
+                    formData: formData,
+                },
+                success: function(response) {
+                    // Update status on the page
+                    var alertClass = response.includes("Thanks") ? "alert-success" : "alert-danger";
+                    var alertHtml = '<div class="alert ' + alertClass + ' alert-dismissible fade show" role="alert">' +
+                        '<strong>' + response + '</strong>' +
+                        '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
+                        '</div>';
+
+                    // Update the status div with the alert
+                    alertDiv.html(alertHtml);
+
+                    // Clear form fields
+                    $("#contactForm")[0].reset();
+                }
+            });
+        });
     });
 </script>
 
