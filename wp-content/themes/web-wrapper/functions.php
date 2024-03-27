@@ -193,9 +193,9 @@ font-family: 'Raleway Dots', sans-serif;
 function enqueue_custom_fonts()
 {
 	if (!is_admin()) {
-		wp_register_style('syne', 'https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+		wp_register_style('Martel_Sans_&_Spectral', 'https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-		wp_enqueue_style('syne');
+		wp_enqueue_style('Martel_Sans_&_Spectral');
 	}
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_fonts');

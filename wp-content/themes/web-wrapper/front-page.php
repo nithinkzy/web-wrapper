@@ -41,6 +41,26 @@ get_header();
 
 <main id="primary" class="site-main">
 
+	<section>
+		<div class="container">
+			<h1 class="display-1">We Believe Every Business Deserves a Website</h1>
+			<div class="d-flex justify-content-between">
+				<p>Your top pick for affordable, local websites. We specialize in crafting online success stories for small businesses.</p>
+				<div>
+					<a class="btn btn-primary" href="/services">Services</a>
+					<a class="btn btn-secondary" href="/contact">Free Consulation</a>
+				</div>
+			</div>
+			<div>
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+			<div id="swiper">
+
+			</div>
+		</div>
+	</section>
 
 	<section class="hero gradient-bg">
 		<div class="container pt-5 ">
