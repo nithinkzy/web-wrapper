@@ -34,11 +34,6 @@
 	<link rel=" icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri() . '/img/favicon-32x32.png' ?>">
 	<link rel=" icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri() . '/img/favicon-16x16.png' ?>">
 	<link rel=" manifest" href="<?php echo get_template_directory_uri() . '/img/site.webmanifest' ?>">
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 	<?php wp_head(); ?>
 </head>
@@ -48,7 +43,7 @@
 	<div id=" page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'web-wrapper'); ?></a>
 
-		<header id="masthead" class="site-header">
+		<!-- <header id="masthead" class="site-header">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div class="container">
 					<?php
@@ -78,4 +73,4 @@
 					?>
 				</div>
 			</nav>
-		</header><!-- #masthead -->
+		</header>#masthead -->
