@@ -15,6 +15,17 @@ jQuery(document).ready(function ($) {
       // $('.navbar').toggleClass('bg-dark');
       $('.navbar').removeClass('fixed-top');
     }
+
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
   });
 
   // // 1. Register ScrollTrigger plugin

@@ -42,21 +42,99 @@ get_header();
 <main id="primary" class="site-main">
 
 	<section>
-		<div class="container">
-			<h1 class="display-1">We Believe Every Business Deserves a Website</h1>
-			<div class="d-flex justify-content-between">
-				<p>Your top pick for affordable, local websites. We specialize in crafting online success stories for small businesses.</p>
-				<div>
-					<a class="btn btn-primary" href="/services">Services</a>
-					<a class="btn btn-secondary" href="/contact">Free Consulation</a>
+		<div class="bg-card">
+			<div class="container-xxl">
+				<h1 class="display-1 mb-5">We Believe Every Business Deserves a Website</h1>
+				<div class="d-flex justify-content-start">
+					<p class="col-6">Your top pick for affordable, local websites. We specialize in crafting online success stories for small businesses.</p>
+					<div class="d-flex gap-5 ms-5 align-items-center">
+						<a class="btn btn-primary" href="/services">Services</a>
+						<a class="btn btn-secondary" href="/contact">Free Consulation</a>
+					</div>
 				</div>
-			</div>
-			<div>
-				<p></p>
-				<p></p>
-				<p></p>
-			</div>
-			<div id="swiper">
+				<div>
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>
+
+
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<?php
+						$args = array(
+							'post_type' => 'portfolio', // Replace 'work' with the name of your custom post type
+							'posts_per_page' => 4,
+							'orderby' => 'date', // You can change the ordering as needed
+							'order' => 'DESC',
+						);
+
+						$query = new WP_Query($args);
+
+						if ($query->have_posts()) :
+							while ($query->have_posts()) :
+								$query->the_post();
+
+								// Get the work image URL from the custom field
+								$work_image_url = get_field('cover_image'); // Assuming you are using ACF (Advanced Custom Fields)
+
+								// Check if there's an image URL, then add it to the carousel
+								if ($work_image_url) {
+									echo '<div class="swiper-slide">';
+									echo '<a href="' . esc_url(get_permalink()) . '" class="work-link">';
+									echo '<img src="' . esc_url($work_image_url) . '" alt="' . get_the_title() . '" class="d-block w-100">';
+									echo '</a>';
+									echo '</div>';
+								}
+
+							endwhile;
+							wp_reset_postdata();
+						else :
+							echo 'No works found.';
+						endif;
+						?>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<?php
+						$args = array(
+							'post_type' => 'portfolio', // Replace 'work' with the name of your custom post type
+							'posts_per_page' => 4,
+							'orderby' => 'date', // You can change the ordering as needed
+							'order' => 'DESC',
+						);
+
+						$query = new WP_Query($args);
+
+						if ($query->have_posts()) :
+							while ($query->have_posts()) :
+								$query->the_post();
+
+								// Get the work image URL from the custom field
+								$work_image_url = get_field('cover_image'); // Assuming you are using ACF (Advanced Custom Fields)
+
+								// Check if there's an image URL, then add it to the carousel
+								if ($work_image_url) {
+									echo '<div class="swiper-slide">';
+									echo '<a href="' . esc_url(get_permalink()) . '" class="work-link">';
+									echo '<img src="' . esc_url($work_image_url) . '" alt="' . get_the_title() . '" class="d-block w-100">';
+									echo '</a>';
+									echo '</div>';
+								}
+
+							endwhile;
+							wp_reset_postdata();
+						else :
+							echo 'No works found.';
+						endif;
+						?>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
 
 			</div>
 		</div>

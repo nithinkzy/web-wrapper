@@ -34,6 +34,11 @@
 	<link rel=" icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri() . '/img/favicon-32x32.png' ?>">
 	<link rel=" icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri() . '/img/favicon-16x16.png' ?>">
 	<link rel=" manifest" href="<?php echo get_template_directory_uri() . '/img/site.webmanifest' ?>">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 	<?php wp_head(); ?>
 </head>

@@ -1,4 +1,4 @@
-/* eslint-env node */
+'use strict'
 
 const { babel } = require('@rollup/plugin-babel')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
@@ -12,7 +12,8 @@ module.exports = {
   },
   plugins: [
     replace({
-      'process.env.NODE_ENV': '"production"'
+      'process.env.NODE_ENV': '"production"',
+      preventAssignment: true
     }),
     nodeResolve(),
     babel({

@@ -1,5 +1,6 @@
-/* eslint-env node */
 /* eslint-disable camelcase */
+
+'use strict'
 
 const browsers = {
   safariMac: {
@@ -28,9 +29,23 @@ const browsers = {
     os: 'Windows',
     os_version: '10',
     browser: 'Chrome',
-    browser_version: 'latest'
+    browser_version: '60'
   },
   firefoxWin10: {
+    base: 'BrowserStack',
+    os: 'Windows',
+    os_version: '10',
+    browser: 'Firefox',
+    browser_version: '60'
+  },
+  chromeWin10Latest: {
+    base: 'BrowserStack',
+    os: 'Windows',
+    os_version: '10',
+    browser: 'Chrome',
+    browser_version: 'latest'
+  },
+  firefoxWin10Latest: {
     base: 'BrowserStack',
     os: 'Windows',
     os_version: '10',
@@ -40,15 +55,15 @@ const browsers = {
   iphone7: {
     base: 'BrowserStack',
     os: 'ios',
-    os_version: '10.0',
+    os_version: '12.0',
     device: 'iPhone 7',
     real_mobile: true
   },
-  iphone11: {
+  iphone12: {
     base: 'BrowserStack',
     os: 'ios',
-    os_version: '13.0',
-    device: 'iPhone 11',
+    os_version: '14.0',
+    device: 'iPhone 12',
     real_mobile: true
   },
   pixel2: {
@@ -60,9 +75,6 @@ const browsers = {
   }
 }
 
-const browsersKeys = Object.keys(browsers)
-
 module.exports = {
-  browsers,
-  browsersKeys
+  browsers
 }
