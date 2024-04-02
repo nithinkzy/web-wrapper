@@ -97,7 +97,7 @@ body {
 
 }
 
-#services {
+.white-card {
     background: #F3EFEF;
     color: $font-color;
     width: 90%;
@@ -109,6 +109,7 @@ body {
 
 #testimonials {
     padding: 5em 0;
+
     .review-card {
         background-color: #1A1A1A;
         width: 30%;

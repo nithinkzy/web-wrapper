@@ -124,7 +124,7 @@ get_header();
 		</div>
 	</section>
 
-	<section id="services">
+	<section id="services" class="white-card">
 		<div class="container-xxl">
 			<h2 class="display-6 mb-5">Services <i class="fa-solid fa-robot"></i></h2>
 			<div class="row">
@@ -193,7 +193,7 @@ get_header();
 	</section>
 
 
-	<section id="cta">
+	<section id="cta" class="white-card">
 		<div class="container-xxl text-center">
 			<h2 class="display-6 mb-3">Start building your website now !</h2>
 			<p class="lead mb-3">
