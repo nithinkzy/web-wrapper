@@ -106,3 +106,22 @@ body {
     border-radius: 28px;
 
 }
+
+#testimonials {
+    padding: 5em 0;
+    .review-card {
+        background-color: #1A1A1A;
+        width: 30%;
+        border: 1px solid #ffffff2f;
+        border-radius: 28px;
+        padding: 1rem 2rem;
+
+        img {
+            height: 75px;
+            width: 75px;
+            object-fit: fill;
+            border-radius: 50%;
+            padding: 0;
+        }
+    }
+}

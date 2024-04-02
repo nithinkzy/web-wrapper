@@ -141,7 +141,56 @@ get_header();
 		</div>
 	</section>
 
-	
+	<section id="testimonials">
+		<div class="container-xxl">
+
+			<h2 class="display-6 mb-4">Testimonials</h2>
+			<div class="d-flex justify-content-evenly ">
+				<?php
+				$args = array(
+					'post_type'      => 'testimonial',
+					'posts_per_page' => 4,
+				);
+
+				$testimonials = get_posts($args);
+
+				$active = 'active';
+
+				foreach ($testimonials as $testimonial) {
+					$review    = get_field('review', $testimonial->ID);
+					$company   = get_field('company', $testimonial->ID);
+					$name      = get_field('name', $testimonial->ID);
+					$position  = get_field('position', $testimonial->ID);
+					$image_url = get_field('image', $testimonial->ID);
+				?>
+
+					<div class="d-flex flex-column justify-content-between review-card">
+						<div class="star-rating mb-3">
+							<i class="fas fa-star text-warning"></i>
+							<i class="fas fa-star text-warning"></i>
+							<i class="fas fa-star text-warning"></i>
+							<i class="fas fa-star text-warning"></i>
+							<i class="fas fa-star text-warning"></i>
+						</div>
+						<p class="review mb-auto"><?php echo esc_html($review); ?></p>
+						<div class="row align-items-center mt-4">
+							<img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($name); ?>" class="col-6 img-fluid">
+							<div class="col-6">
+								<p class="company m-0"><?php echo esc_html($company); ?></p>
+								<p class="position m-0"><?php echo esc_html($name); ?> - <span class="fw-bold"><?php echo esc_html($position); ?></span></p>
+							</div>
+						</div>
+					</div>
+
+				<?php
+					$active = ''; // Remove 'active' class after the first iteration
+				}
+				?>
+			</div>
+
+		</div>
+
+	</section>
 
 
 
