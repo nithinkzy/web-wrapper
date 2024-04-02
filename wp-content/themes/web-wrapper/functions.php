@@ -274,3 +274,66 @@ function process_contact_form()
 	// Always exit to avoid extra output
 	wp_die();
 }
+
+$services = array(
+	array(
+		'icon' => 'fa-desktop',
+		'title' => 'Web Design and Development',
+		'description' => 'Craft visually stunning and user-friendly websites that captivate your audience.',
+	),
+	array(
+		'icon' => 'fa-camera',
+		'title' => 'Professional Photography Services',
+		'description' => 'Elevate your brand imagery with professional photography services.',
+	),
+	array(
+		'icon' => 'fa-solid fa-robot',
+		'title' => 'AI WhatsApp Bot Development',
+		'description' => 'Transform customer engagement with AI-driven WhatsApp bots for personalized interactions.',
+	),
+	array(
+		'icon' => 'fa-shopping-cart',
+		'title' => 'E-Commerce Solutions',
+		'description' => 'Maximize online sales with SEO-optimized and user-friendly e-commerce platforms.',
+	),
+	array(
+		'icon' => 'fa-chart-line',
+		'title' => 'Data Analytics for Informed Decisions',
+		'description' => 'Harness the power of data to make informed decisions and identify trends.',
+	),
+	array(
+		'icon' => 'fa-cogs',
+		'title' => 'Custom Software Development for Efficiency',
+		'description' => 'Empower your business with tailor-made software solutions for efficiency.',
+	),
+	array(
+		'icon' => 'fa-refresh',
+		'title' => 'Website Revamp and Ongoing Maintenance',
+		'description' => 'Revitalize your digital presence with our website revamp services and ensure ongoing maintenance for optimal performance.',
+	),
+	array(
+		'icon' => 'fa-search-location',
+		'title' => 'Local SEO Optimization for Visibility',
+		'description' => 'Boost your local visibility with our specialized Local SEO optimization services. Stand out in local searches and attract nearby customers effectively.',
+	),
+	array(
+		'icon' => 'fa-wrench',
+		'title' => 'Custom Tools for Business Efficiency',
+		'description' => 'Optimize your business processes with our bespoke tools. From unique software solutions to tailored applications, we empower your business with custom tools.',
+	),
+	array(
+		'icon' => 'fa-lightbulb',
+		'title' => 'Expert IT Consulting and Advice',
+		'description' => 'Navigate the dynamic tech landscape with confidence. Our IT experts provide insightful advice and guidance, ensuring your business decisions align with SEO principles for digital success.',
+	),
+	array(
+		'icon' => 'fa-search',
+		'title' => 'Website Auditing for Enhanced Performance',
+		'description' => 'Optimize your website for better performance with our comprehensive audits. Identify areas for improvement, both in appearance and traffic, enhancing your Google search rankings.',
+	),
+	array(
+		'icon' => 'fa-star',
+		'title' => 'Google Review Improvement',
+		'description' => 'Enhance your online reputation with our Google Review Improvement service. We help businesses manage and improve their online reviews, boosting their overall rating and visibility.',
+	),
+);

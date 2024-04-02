@@ -46,7 +46,7 @@ get_header();
 			<div class="container-xxl">
 				<div class="col-11 ms-auto">
 
-					<h1 class="display-1 my-5 pt-5">We Believe every business Deserves a Website</h1>
+					<h1 class="display-1 mt-2 mb-3">We Believe every business Deserves a Website</h1>
 
 					<div class="d-flex justify-content-start mb-5">
 						<p class="col-6 lead">Your top pick for affordable, local websites. We specialize in crafting online success stories for small businesses.</p>
@@ -57,7 +57,7 @@ get_header();
 					</div>
 				</div>
 
-				<div class="d-flex justify-content-between">
+				<div class="d-flex justify-content-between mb-5">
 					<p><i class="fa-solid fa-sack-dollar"></i> Money-Back Guarantee Included.</p>
 					<p><i class="fa-solid fa-sack-dollar"></i> Built To Convert Over Your Competitors</p>
 					<p><i class="fa-solid fa-sack-dollar"></i> Toronto Developed & Operated</p>
@@ -109,6 +109,39 @@ get_header();
 		</div>
 	</section>
 
+
+	<section id="about">
+		<div class="container-xxl">
+			<div class="d-flex justify-content-between">
+				<div class="col-5">
+					<h2 class="display-6 mb-4">We Help You Stand Out From Your Competitors</h2>
+					<p class="mb-3">At web-wrapper we meticulously code and handcraft each website, tailoring it to your business. Our sites prioritize : Bespoke Design , Optimized Speed, SEO Excellence, Responsive on all Devices</p>
+					<a class="btn btn-secondary" href="/services">About Us</a>
+				</div>
+				<img src="<?php echo get_template_directory_uri() . '/img/about-us.svg' ?>" alt="Step 1 Image" class="img-fluid">
+
+			</div>
+		</div>
+	</section>
+
+	<section id="services">
+		<div class="container-xxl">
+			<h2 class="display-6 mb-5">Services <i class="fa-solid fa-robot"></i></h2>
+			<div class="row">
+				<?php foreach ($services as $service) : ?>
+					<div class="col-md-6">
+						<div class="d-flex align-items-center mb-5">
+							<i class="fa <?php echo $service['icon']; ?> me-3"></i>
+							<h5 class="mb-0"><?php echo $service['title']; ?></h5>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+			<a class="btn btn-primary" href="/services">DISCOVER YOUR SOLUTION</a>
+		</div>
+	</section>
+
+	
 
 
 
