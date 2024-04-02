@@ -193,6 +193,17 @@ get_header();
 	</section>
 
 
+	<section id="cta">
+		<div class="container-xxl text-center">
+			<h2 class="display-6 mb-3">Start building your website now !</h2>
+			<p class="lead mb-3">
+				Take the first step towards transforming your online presence. Your business deserves the magic of action.
+			</p>
+			<a class="btn btn-primary" href="/contact">Contact Today</a>
+		</div>
+	</section>
+
+
 
 
 
