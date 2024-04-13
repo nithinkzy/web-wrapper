@@ -96,7 +96,7 @@ $services = array(
 	<!-- Main Title and Subtitle -->
 	<div class="row mb-5 pb-4">
 		<div class="col-12 col-lg-8 mx-auto text-center">
-			<h2 class="mb-3"> <span>Our Services</span> <br> Web Design, Development, SEO, and More</h2>
+			<h1 class="display-6 mb-3"> <span>Our Services</span> <br> Web Design, Development, SEO, and More</h1>
 			<p class="lead">Tailored Solutions for Small to Medium Businesses</p>
 		</div>
 	</div>

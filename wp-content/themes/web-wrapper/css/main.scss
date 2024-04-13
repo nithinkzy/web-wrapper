@@ -4,7 +4,7 @@
 // $gray: #E6E6E6;
 // $sale: rgba(167, 4, 4, 0.8);
 
-$primary: #8D9739;
+$primary: #3cb816;
 $secondary: #D9D9D9;
 $headings-font-family: "Martel Sans", sans-serif;
 $font-family-base: "Spectral", serif;
@@ -36,18 +36,61 @@ body {
     color: white;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .btn-primary {
     background: $primary;
     border-radius: 28px;
     text-transform: uppercase;
+    color: white;
+    padding: 6px 18px;
+
 }
 
 .btn-secondary {
+    padding: 6px 18px;
     text-transform: uppercase;
     border: 1px solid white;
     background: none;
     color: white;
     border-radius: 28px;
+}
+
+
+header {
+    position: relative;
+    top: 65px;
+
+    .brand {
+        font-size: 1.4rem;
+        font-weight: 900;
+        letter-spacing: 1px;
+    }
+
+    ul {
+        gap: 5em;
+    }
+
+    a {
+        color: white;
+
+
+    }
+
 }
 
 // Add custom code after this
@@ -59,13 +102,19 @@ body {
     // background: #141414;
     color: #F3EFEF;
     width: 90%;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 3em 0em;
     border-radius: 28px;
 
+    .heading {
+        padding-top: 15em;
+    }
+
     h1 {
         font-size: 5.4rem;
-        font-weight: 600;
+        line-height: 1;
+        letter-spacing: -4px;
+        font-style: italic;
     }
 
     .swiper {
@@ -80,15 +129,55 @@ body {
     .swiper-slide {
         background-position: center;
         background-size: cover;
-        width: 500px;
-        height: 288px;
+        width: 643px;
     }
 
     .swiper-slide img {
         display: block;
         width: 100%;
     }
+}
 
+
+
+#services {
+    margin-top: 5%;
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+
+        li {
+            padding-bottom: 0.5rem;
+            text-decoration: underline;
+            text-underline-offset: 0.2em;
+        }
+
+    }
+
+    .services-card {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 3em;
+        column-gap: 2rem;
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        // grid-column-gap: 1rem;
+        // grid-row-gap: 1rem;
+
+        p {
+            padding: 0.5rem 3rem;
+            background: #F3EFEF;
+            color: $font-color;
+            border-radius: 28px;
+            font-size: 45px;
+            FONT-WEIGHT: 600;
+            border: 1px solid #F3EFEF;
+
+        }
+    }
 }
 
 #about {
@@ -97,18 +186,40 @@ body {
 
 }
 
-.white-card {
+
+#why-website {
+    .points {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
+
+#cta {
+
     background: #F3EFEF;
     color: $font-color;
     width: 90%;
-    margin: 2rem auto;
+    margin: 8em auto;
     padding: 3em 0em;
     border-radius: 28px;
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .ribbon {
+        padding: 10px 0;
+        color: #ff0000;
+        text-align: center;
+        font-weight: bold;
+        margin: 0 auto;
+        font-size: 1.5rem;
+    }
 
 }
 
 #testimonials {
-    padding: 5em 0;
 
     .review-card {
         background-color: #1A1A1A;
@@ -124,5 +235,182 @@ body {
             border-radius: 50%;
             padding: 0;
         }
+    }
+}
+
+footer {
+    background: #141414;
+    border-radius: 28px;
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 6%;
+    color: #F8F9FA;
+    .brand {
+        font-size: 1.4rem;
+        font-weight: 900;
+        letter-spacing: 1px;
+    }
+}
+
+
+
+
+.services-page {
+    margin-top: 5%;
+
+    .card {
+        border-radius: 28px;
+        padding: 1rem;
+        /* From https://css.glass */
+        // background: rgba(255, 255, 255, 0.2);
+        // border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        // backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.32);
+        min-height: 250px;
+
+        i {
+            margin-bottom: 1.5rem !important;
+        }
+    }
+
+    .accordion-button {
+        font-size: 12px;
+        line-height: 14.4px;
+    }
+}
+
+.portfolio-page {
+    margin-top: 5%;
+
+    // Override Bootstrap variables
+    $link-color: $primary;
+
+    // Your custom variables
+    $underline-height: 4px;
+    $link-hover-color: darken($primary, 10%);
+    // Include Bootstrap
+
+    // Additional custom styles
+    a {
+        text-decoration: none; // Remove default underline
+        border-bottom: $underline-height solid transparent; // Add custom underline
+        transition: border-bottom 0.3s, font-weight 0.3s; // Add transition effect
+        font-weight: normal; // Set initial font weight
+    }
+
+    a:hover {
+        border-bottom: $underline-height solid $link-hover-color; // Change underline color on hover
+        transition: all 0.3s ease;
+    }
+
+    a:focus,
+    a:active {
+        color: $primary !important;
+
+    }
+
+    .portfolio {
+        /* From https://css.glass */
+        background: #222222;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        // backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+
+
+
+        .content {
+            padding: clamp(24px, 3vw, 64px);
+
+        }
+
+        h3 {
+            font-size: clamp(30px, 20.8450704225px + 1.8309859155vw, 56px)
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        a {
+            font-size: 1em;
+        }
+
+
+        @include media-breakpoint-up(md) {
+
+            a {
+                font-size: 1.6em;
+            }
+        }
+
+        img {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+
+            @include media-breakpoint-up(md) {
+                padding: 2rem 0rem 0rem 0rem;
+                margin-bottom: -10px;
+            }
+
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        }
+    }
+}
+
+
+.contact-us {
+    margin-top: 5%;
+
+    form {
+        border: 1px solid rgba(255, 255, 255, 0.32);
+        border-radius: 28px;
+    }
+
+    .lead {
+        font-size: 32px;
+        line-height: 46px;
+        color: rgba(0, 0, 0, 0.2509803922);
+    }
+
+    .floating-label-input {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .floating-label-input input,
+    textarea {
+        width: 100%;
+        height: 100%;
+        padding-top: 33px !important;
+        outline: 0;
+        border: 0 !important;
+        border-bottom: 1px solid #bababa3b !important;
+        background: 0 0;
+        box-shadow: none;
+        font-size: 26px;
+        color: #fff;
+        transition: .35s ease-out;
+        border-radius: 0 !important;
+    }
+
+    .floating-label-input label {
+        position: absolute;
+        pointer-events: none;
+        left: $label-left-position;
+        top: $label-top-position;
+        transition: 0.2s ease all;
+    }
+
+    .floating-label-input input:focus~label,
+    .floating-label-input textarea:focus~label,
+    .floating-label-input input:not(:focus):valid~label,
+    .floating-label-input textarea:not(:focus):valid~label {
+        top: 8px;
+        font-size: 11px;
     }
 }

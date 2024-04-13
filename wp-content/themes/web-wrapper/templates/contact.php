@@ -31,8 +31,8 @@ get_header();
     <!-- Contact Form Section -->
     <div class="row">
         <div class="col-12 text-center">
-            <h2 class="mb-4"><span>Contact Us</span> <br> Transforming Your Online Presence</h2>
-            <p class="lead mb-4">Ready to transform your digital presence with Web-wrapper ?
+            <h1 class="display-6 mb-4"><span>Contact Us</span> <br> Transforming Your Online Presence</h1>
+            <p class=" mb-4">Ready to transform your digital presence with Web-wrapper ?
                 <br>
                 Fantastic! simply complete the form below 😀
             </p>
@@ -61,7 +61,7 @@ get_header();
 
             <!-- Message Field -->
             <div class="form-group floating-label-input mb-5">
-                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
                 <label for="message">Briefly describe what you are looking for</label>
             </div>
 

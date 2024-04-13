@@ -43,25 +43,26 @@ get_header();
 
 	<section>
 		<div class="hero">
-			<div class="container-xxl">
-				<div class="col-11 ms-auto">
+			<div class="container-xxl heading">
+				<div class="">
 
-					<h1 class="display-1 mt-2 mb-3">We Believe every business Deserves a Website</h1>
+					<h1 class="display-1 mb-5">We believe, every business<span> Deserves a Website</span></h1>
 
-					<div class="d-flex justify-content-start mb-5">
-						<p class="col-6 lead">Your top pick for affordable, local websites. We specialize in crafting online success stories for small businesses.</p>
+					<div class="d-flex justify-content-between mb-5">
 						<div class="d-flex gap-5 ms-5 align-items-center">
-							<a class="btn btn-secondary" href="/services">EXPLORE SERVICES</a>
-							<a class="btn btn-primary" href="/contact">Free Consulation</a>
+							<a class="btn btn-secondary" href="/services">explore SERVICES</a>
+							<a class="btn btn-primary" href="/contact">START NOW</a>
 						</div>
+						<p class="col-4 ">Your top pick for affordable, local websites. We specialize in crafting online success stories for small businesses.</p>
 					</div>
 				</div>
 
-				<div class="d-flex justify-content-between mb-5">
+				<!-- <div class="d-flex justify-content-between mb-5">
+
 					<p><i class="fa-solid fa-sack-dollar"></i> Money-Back Guarantee Included.</p>
 					<p><i class="fa-solid fa-sack-dollar"></i> Built To Convert Over Your Competitors</p>
 					<p><i class="fa-solid fa-sack-dollar"></i> Toronto Developed & Operated</p>
-				</div>
+				</div> -->
 
 
 
@@ -102,7 +103,9 @@ get_header();
 					endif;
 					?>
 				</div>
-				<div class="swiper-button-next"></div>
+				<div class="swiper-button-next">
+					<p>View Next</p>
+				</div>
 				<div class="swiper-button-prev"></div>
 				<div class="swiper-pagination"></div>
 			</div>
@@ -114,8 +117,8 @@ get_header();
 		<div class="container-xxl">
 			<div class="d-flex justify-content-between">
 				<div class="col-5">
-					<h2 class="display-6 mb-4">We Help You Stand Out From Your Competitors</h2>
-					<p class="mb-3">At web-wrapper we meticulously code and handcraft each website, tailoring it to your business. Our sites prioritize : Bespoke Design , Optimized Speed, SEO Excellence, Responsive on all Devices</p>
+					<h2 class="display-4 mb-4">We Will Help You Stand Out From Your Competitors</h2>
+					<p class="mb-4">At web-wrapper we meticulously code and handcraft each website, tailoring it to your business. Our sites prioritize : Bespoke Design , Optimized Speed, SEO Excellence, Responsive on all Devices</p>
 					<a class="btn btn-secondary" href="/services">About Us</a>
 				</div>
 				<img src="<?php echo get_template_directory_uri() . '/img/about-us.svg' ?>" alt="Step 1 Image" class="img-fluid">
@@ -123,28 +126,49 @@ get_header();
 			</div>
 		</div>
 	</section>
-
-	<section id="services" class="white-card">
+	<section id="services" class="">
 		<div class="container-xxl">
-			<h2 class="display-6 mb-5">Services <i class="fa-solid fa-robot"></i></h2>
-			<div class="row">
-				<?php foreach ($services as $service) : ?>
-					<div class="col-md-6">
-						<div class="d-flex align-items-center mb-5">
-							<i class="fa <?php echo $service['icon']; ?> me-3"></i>
-							<h5 class="mb-0"><?php echo $service['title']; ?></h5>
-						</div>
-					</div>
-				<?php endforeach; ?>
+			<div class="d-flex align-items-center justify-content-between mb-5">
+
+				<h2 class="display-4">Services we offer.</h2>
+				<a class="btn btn-secondary" href="/contact">Talk to us</a>
 			</div>
-			<a class="btn btn-primary" href="/services">DISCOVER YOUR SOLUTION</a>
+
+			<ul class="d-flex justify-content-around ">
+				<li>Business Website</li>
+				<li>Landing Page</li>
+				<li>E-commerce</li>
+				<li>Custom Web App</li>
+			</ul>
+			<div class="services-card mb-5">
+				<p>Design</p>
+				<p>Development</p>
+				<p>Audit</p>
+				<p>Revamp</p>
+				<p>Maintainence</p>
+				<p>Search Engine Optimization</p>
+				<!-- <p>SEO</p> -->
+
+			</div>
+
+			<!-- <a class="btn btn-primary" href="/services">DISCOVER YOUR SOLUTION</a> -->
 		</div>
 	</section>
+
+	<section id="cta" class="white-card">
+		<div class="container-xxl text-center">
+			<div class="ribbon text-center mb-2">Offer Ends Soon</div>
+			<h2 class="display-5 mb-3">Your dream website today for as low as <strong>$300</strong></h2>
+			<p class="mb-3">Yes, you read that right, it's worth over $1000! Don't let this chance slip away</p>
+			<a class="btn btn-primary" href="/contact">Get in Touch Today</a>
+		</div>
+	</section>
+
 
 	<section id="testimonials">
 		<div class="container-xxl">
 
-			<h2 class="display-6 mb-4">Testimonials</h2>
+			<h2 class="display-4 mb-5 text-center">Testimonials</h2>
 			<div class="d-flex justify-content-evenly ">
 				<?php
 				$args = array(
@@ -177,7 +201,8 @@ get_header();
 							<img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($name); ?>" class="col-6 img-fluid">
 							<div class="col-6">
 								<p class="company m-0"><?php echo esc_html($company); ?></p>
-								<p class="position m-0"><?php echo esc_html($name); ?> - <span class="fw-bold"><?php echo esc_html($position); ?></span></p>
+								<p class="position m-0"><?php echo esc_html($name); ?> </p>
+								<p class="fw-bold"><?php echo esc_html($position); ?></p>
 							</div>
 						</div>
 					</div>
@@ -193,15 +218,7 @@ get_header();
 	</section>
 
 
-	<section id="cta" class="white-card">
-		<div class="container-xxl text-center">
-			<h2 class="display-6 mb-3">Start building your website now !</h2>
-			<p class="lead mb-3">
-				Take the first step towards transforming your online presence. Your business deserves the magic of action.
-			</p>
-			<a class="btn btn-primary" href="/contact">Contact Today</a>
-		</div>
-	</section>
+
 
 
 
