@@ -32,7 +32,7 @@ get_header();
     <!-- About Title Section -->
     <div class="row text-center mb-5 pb-4">
         <div class="col-12 col-md-8 mx-auto">
-            <h1 class="mb-3"><span>About Us</span> <br> Your Digital <br> Transformation Partner</h1>
+            <h1 class="display-5 mb-3"><span>About Us</span> <br> Your Digital <br> Transformation Partner</h1>
             <p class="lead">Affordable Websites Tailored for Impact</p>
         </div>
     </div>

@@ -34,7 +34,8 @@
 	<link rel=" icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri() . '/img/favicon-32x32.png' ?>">
 	<link rel=" icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri() . '/img/favicon-16x16.png' ?>">
 	<link rel=" manifest" href="<?php echo get_template_directory_uri() . '/img/site.webmanifest' ?>">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<?php wp_head(); ?>
 </head>
 
@@ -77,14 +78,49 @@
 		<header>
 			<div class="container">
 				<div class="d-flex align-items-center justify-content-between">
-					<a href="/"class="brand">Web-wrapper</a>
-					<ul class="d-flex">
-						<li><a href="/"> Home</a></li>
+					<a href="/" class="brand">Web-wrapper</a>
+					<!-- Button to toggle mobile menu -->
+					<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>Menu
+					</button>
+					<!-- Mobile menu content -->
+					<div class="collapse mobile-menu" id="mobileMenu">
+						<div class="top-nav d-flex justify-content-between align-items-start">
+							<ul class="d-flex flex-column gap-4">
+								<li><a class="display-4" href="/about"> About</a></li>
+								<li><a class="display-4" href="/services"> Services</a></li>
+								<li><a class="display-4" href="/portfolio"> Portfolio</a></li>
+								<li><a class="display-4" href="/contact"> Contact</a></li>
+								<li><a class="display-4" href="/blogs"> Blogs</a></li>
+							</ul>
+							<button class="btn-primary close-btn">Close</button>
+						</div>
+						<div class="bottom-nav d-flex flex-column">
+							<a href="mailto:info@web-wrapper.com" class="text-decoration-none">
+								<h6 class="">E: info@web-wrapper.com</h6>
+							</a>
+							<a href="tel:+14379245244" class="text-decoration-none">
+								<h6 class="">T: +1 (437) - 924 - 5244</h6>
+							</a>
+						</div>
+					</div>
+					<!-- End of mobile menu content -->
+					<!-- Desktop menu -->
+					<ul class="d-none d-md-flex">
+						<li><a href="/about"> About</a></li>
 						<li><a href="/services"> Services</a></li>
 						<li><a href="/portfolio"> Portfolio</a></li>
 						<li><a href="/contact"> Contact</a></li>
 						<li><a href="/blogs"> Blogs</a></li>
 					</ul>
+					<!-- End of desktop menu -->
 				</div>
 			</div>
 		</header>
+
+		<!-- Overlay -->
+		<div class="overlay"></div>
+
+
+		<!-- Overlay -->
+		<div class="overlay"></div>

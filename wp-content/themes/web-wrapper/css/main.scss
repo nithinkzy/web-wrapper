@@ -91,6 +91,48 @@ header {
 
     }
 
+
+
+
+}
+
+.hide {
+    display: none;
+}
+
+.overlay {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.mobile-menu {
+    background: #222222;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    padding: 6%;
+    z-index: 2;
+    border-radius: 28px;
+
+
+    .top-nav {
+        gap: 10vw;
+    }
+
+
 }
 
 // Add custom code after this
@@ -243,8 +285,8 @@ footer {
     border-radius: 28px;
     width: 98%;
     margin: 0 auto;
-    margin-top: 6%;
     color: #F8F9FA;
+
     .brand {
         font-size: 1.4rem;
         font-weight: 900;
@@ -413,4 +455,38 @@ footer {
         top: 8px;
         font-size: 11px;
     }
+}
+
+
+.about-page {
+    margin-top: 5%;
+
+
+
+    .values {
+        gap: 2rem;
+        color: #222222;
+
+
+        i {
+            font-size: 2rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .values {
+            gap: 0;
+
+            i {
+                font-size: 2rem;
+            }
+
+            .lead {
+                font-size: 13px;
+                font-weight: 300;
+                line-height: 15.6px;
+            }
+        }
+    }
+
 }

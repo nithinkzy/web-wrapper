@@ -49,11 +49,16 @@ get_header();
 					<h1 class="display-1 mb-5">We believe, every business<span> Deserves a Website</span></h1>
 
 					<div class="d-flex justify-content-between mb-5">
-						<div class="d-flex gap-5 ms-5 align-items-center">
+						<div class="d-flex gap-5 align-items-center">
 							<a class="btn btn-secondary" href="/services">explore SERVICES</a>
 							<a class="btn btn-primary" href="/contact">START NOW</a>
 						</div>
-						<p class="col-4 ">Your top pick for affordable, local websites. We specialize in crafting online success stories for small businesses.</p>
+						<div class="col-4">
+
+							<p class=" ">Toronto, Canada based web agency for affordable websites. We specialize in crafting online success stories for small businesses.</p>
+							<p class="fw-bold"><i class="fa-solid fa-certificate pe-2" style="color: #FFD43B;"></i>100% Money-Back Guarantee Included.</p>
+						</div>
+
 					</div>
 				</div>
 
@@ -117,7 +122,7 @@ get_header();
 		<div class="container-xxl">
 			<div class="d-flex justify-content-between">
 				<div class="col-5">
-					<h2 class="display-4 mb-4">We Will Help You Stand Out From Your Competitors</h2>
+					<h2 class="display-4 mb-4">We Will Help You Stand Out From Your Competitors.</h2>
 					<p class="mb-4">At web-wrapper we meticulously code and handcraft each website, tailoring it to your business. Our sites prioritize : Bespoke Design , Optimized Speed, SEO Excellence, Responsive on all Devices</p>
 					<a class="btn btn-secondary" href="/services">About Us</a>
 				</div>
@@ -166,7 +171,7 @@ get_header();
 
 
 	<section id="testimonials">
-		<div class="container-xxl">
+		<div class="container-xxl mb-5">
 
 			<h2 class="display-4 mb-5 text-center">Testimonials</h2>
 			<div class="d-flex justify-content-evenly ">

@@ -31,8 +31,15 @@ jQuery(document).ready(function ($) {
   });
 
 });
+    // Function to close the mobile menu when the close button is clicked
+    $(".close-btn, .overlay").click(function() {
+      $(".overlay, .mobile-menu").removeClass("active");
+  });
 
-
+  // Function to open the mobile menu when the menu button is clicked
+  $(".navbar-toggler").click(function() {
+      $(".overlay, .mobile-menu").addClass("active");
+  });
 // // 1. Register ScrollTrigger plugin
 // gsap.registerPlugin(ScrollTrigger);
 

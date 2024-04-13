@@ -12019,6 +12019,41 @@ header a {
   color: white;
 }
 
+.hide {
+  display: none;
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.mobile-menu {
+  background: #222222;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  padding: 6%;
+  z-index: 2;
+  border-radius: 28px;
+}
+.mobile-menu .top-nav {
+  gap: 10vw;
+}
+
 .hero {
   min-height: 100%;
   background: url(../img/web_wrapper_for_world.png);
@@ -12137,7 +12172,6 @@ footer {
   border-radius: 28px;
   width: 98%;
   margin: 0 auto;
-  margin-top: 6%;
   color: #F8F9FA;
 }
 footer .brand {
@@ -12265,4 +12299,28 @@ footer .brand {
 .contact-us .floating-label-input textarea:not(:focus):valid ~ label {
   top: 8px;
   font-size: 11px;
+}
+
+.about-page {
+  margin-top: 5%;
+}
+.about-page .values {
+  gap: 2rem;
+  color: #222222;
+}
+.about-page .values i {
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .about-page .values {
+    gap: 0;
+  }
+  .about-page .values i {
+    font-size: 2rem;
+  }
+  .about-page .values .lead {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 15.6px;
+  }
 }/*# sourceMappingURL=main.css.map */
