@@ -164,7 +164,7 @@ header {
         padding-bottom: 50px;
         position: relative;
         bottom: 1rem;
-        left: -10%;
+        left: -7%;
         width: 100vw;
     }
 
@@ -172,11 +172,14 @@ header {
         background-position: center;
         background-size: cover;
         width: 643px;
+
     }
 
     .swiper-slide img {
         display: block;
         width: 100%;
+        border-radius: 28px;
+        border: 1px solid #F3EFEF;
     }
 }
 

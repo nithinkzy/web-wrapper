@@ -73,6 +73,8 @@ get_header();
 
 
 			</div>
+			<p class="text-center link-underline-light">Recent works</p>
+
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
 					<?php
