@@ -108,11 +108,6 @@ get_header();
 					endif;
 					?>
 				</div>
-				<div class="swiper-button-next">
-					<p>View Next</p>
-				</div>
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 	</section>

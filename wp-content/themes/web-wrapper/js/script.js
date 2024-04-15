@@ -9,6 +9,9 @@ jQuery(document).ready(function ($) {
 
 
   var swiper = new Swiper(".mySwiper", {
+    autoplay: {
+      delay: 1000,
+    },
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -20,14 +23,7 @@ jQuery(document).ready(function ($) {
       modifier: 1,
       slideShadows: true,
     },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    loop:true
   });
 
 });
