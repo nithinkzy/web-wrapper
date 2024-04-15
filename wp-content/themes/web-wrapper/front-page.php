@@ -117,13 +117,13 @@ get_header();
 
 	<section id="about">
 		<div class="container-xxl">
-			<div class="d-flex justify-content-between">
+			<div class="d-flex justify-content-between align-items-center">
 				<div class="col-5">
 					<h2 class="display-4 mb-4">We Will Help You Stand Out From Your Competitors.</h2>
-					<p class="mb-4">At web-wrapper we meticulously code and handcraft each website, tailoring it to your business. Our sites prioritize : Bespoke Design , Optimized Speed, SEO Excellence, Responsive on all Devices</p>
+					<p class="mb-4">Welcome to Web-Wrapper, your premier destination for affordable and bespoke website solutions. Based in Toronto, Canada, and serving clients worldwide, we specialize in crafting unique online identities that set you apart from the competition. Whether you're a budding entrepreneur or an established business, our team is dedicated to creating stunning websites that capture your brand essence and drive results. From website design and development to optimization and support, we're here to help you shine in the digital arena.</p>
 					<a class="btn btn-secondary" href="/services">About Us</a>
 				</div>
-				<img src="<?php echo get_template_directory_uri() . '/img/about-us.svg' ?>" alt="Step 1 Image" class="img-fluid">
+				<img src="<?php echo get_template_directory_uri() . '/img/why-choose-web-wrapper.jpeg' ?>" alt="Step 1 Image" class="img-fluid">
 
 			</div>
 		</div>

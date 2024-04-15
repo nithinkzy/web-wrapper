@@ -12126,6 +12126,10 @@ header a {
 #about {
   padding: 80px 0px;
 }
+#about img {
+  border-radius: 28px;
+  width: 37%;
+}
 
 #why-website .points {
   display: grid;
