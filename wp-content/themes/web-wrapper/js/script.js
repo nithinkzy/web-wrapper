@@ -23,19 +23,20 @@ jQuery(document).ready(function ($) {
       modifier: 1,
       slideShadows: true,
     },
-    loop:true
+    loop: true
   });
 
-});
-    // Function to close the mobile menu when the close button is clicked
-    $(".close-btn, .overlay").click(function() {
-      $(".overlay, .mobile-menu").removeClass("active");
+  // Function to close the mobile menu when the close button is clicked
+  $(".close-btn, .overlay").click(function () {
+    console.log("test");
+    $(".overlay, .mobile-menu").removeClass("show");
   });
 
   // Function to open the mobile menu when the menu button is clicked
-  $(".navbar-toggler").click(function() {
-      $(".overlay, .mobile-menu").addClass("active");
+  $(".navbar-toggler").click(function () {
+    $(".overlay, .mobile-menu").addClass("show");
   });
+});
 // // 1. Register ScrollTrigger plugin
 // gsap.registerPlugin(ScrollTrigger);
 

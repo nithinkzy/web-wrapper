@@ -80,33 +80,35 @@
 				<div class="d-flex align-items-center justify-content-between">
 					<a href="/" class="brand">Web-wrapper</a>
 					<!-- Button to toggle mobile menu -->
-					<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>Menu
 					</button>
 					<!-- Mobile menu content -->
-					<div class="collapse mobile-menu" id="mobileMenu">
-						<div class="top-nav d-flex justify-content-between align-items-start">
-							<ul class="d-flex flex-column gap-4">
-								<li><a class="display-4" href="/about"> About</a></li>
-								<li><a class="display-4" href="/services"> Services</a></li>
-								<li><a class="display-4" href="/portfolio"> Portfolio</a></li>
-								<li><a class="display-4" href="/contact"> Contact</a></li>
-								<li><a class="display-4" href="/blogs"> Blogs</a></li>
-							</ul>
-							<button class="btn-primary close-btn">Close</button>
-						</div>
-						<div class="bottom-nav d-flex flex-column">
-							<a href="mailto:info@web-wrapper.com" class="text-decoration-none">
-								<h6 class="">E: info@web-wrapper.com</h6>
-							</a>
-							<a href="tel:+14379245244" class="text-decoration-none">
-								<h6 class="">T: +1 (437) - 924 - 5244</h6>
-							</a>
+					<div class="collapse mobile-menu " id="mobileMenu">
+						<div class="d-flex flex-column justify-content-between h-100">
+							<div class="top-nav d-flex justify-content-between align-items-start">
+								<ul class="d-flex flex-column gap-4">
+									<li><a class="display-4" href="/about"> About</a></li>
+									<li><a class="display-4" href="/services"> Services</a></li>
+									<li><a class="display-4" href="/portfolio"> Portfolio</a></li>
+									<li><a class="display-4" href="/contact"> Contact</a></li>
+									<li><a class="display-4" href="/blogs"> Blogs</a></li>
+								</ul>
+								<button class="btn-secondary close-btn">Close</button>
+							</div>
+							<div class="bottom-nav d-flex flex-column">
+								<a href="mailto:info@web-wrapper.com" class="text-decoration-none">
+									<h6 class="">E: info@web-wrapper.com</h6>
+								</a>
+								<a href="tel:+14379245244" class="text-decoration-none">
+									<h6 class="">T: +1 (437) - 924 - 5244</h6>
+								</a>
+							</div>
 						</div>
 					</div>
 					<!-- End of mobile menu content -->
 					<!-- Desktop menu -->
-					<ul class="d-none d-md-flex">
+					<ul class="d-none d-lg-flex">
 						<li><a href="/about"> About</a></li>
 						<li><a href="/services"> Services</a></li>
 						<li><a href="/portfolio"> Portfolio</a></li>
@@ -117,10 +119,6 @@
 				</div>
 			</div>
 		</header>
-
-		<!-- Overlay -->
-		<div class="overlay"></div>
-
 
 		<!-- Overlay -->
 		<div class="overlay"></div>

@@ -55,7 +55,7 @@ get_header();
 						</div>
 						<div class="col-4">
 
-							<p class=" ">Toronto, Canada based web agency for affordable websites. We specialize in crafting online success stories for small businesses.</p>
+							<p class=" ">Toronto, Canada based web agency for affordable websites. </p>
 							<p class="fw-bold"><i class="fa-solid fa-certificate pe-2" style="color: #FFD43B;"></i>100% Money-Back Guarantee Included.</p>
 						</div>
 
