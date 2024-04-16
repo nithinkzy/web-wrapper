@@ -12280,6 +12280,9 @@ footer .brand {
 .services-page {
   margin-top: 5%;
 }
+.services-page i {
+  color: #c5a532;
+}
 .services-page .card {
   border-radius: 28px;
   padding: 1rem;

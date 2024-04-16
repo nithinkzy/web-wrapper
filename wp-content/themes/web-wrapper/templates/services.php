@@ -114,7 +114,7 @@ $services = array(
 			<div class="col-md-6 col-lg-4">
 				<div class="card h-100">
 					<div class="card-body">
-						<i class="fas <?php echo esc_attr($service['icon']); ?> fa-3x text-primary mb-5"></i>
+						<i class="fas <?php echo esc_attr($service['icon']); ?> fa-3x  mb-5"></i>
 						<h5 class="card-title  mb-3"><?php echo esc_html($service['title']); ?></h5>
 						<p class="card-text"><?php echo esc_html($service['description']); ?></p>
 					</div>
@@ -135,8 +135,8 @@ $services = array(
 
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="serviceHeading<?php echo $index; ?>">
-					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#serviceCollapse<?php echo $index; ?>" aria-expanded="true" aria-controls="serviceCollapse<?php echo $index; ?>">
-						<i class="fas <?php echo esc_attr($service['icon']); ?> fa-2x text-primary mb-2 pe-3"></i>
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#serviceCollapse<?php echo $index; ?>" aria-expanded="true" aria-controls="serviceCollapse<?php echo $index; ?>">
+						<i class="fas <?php echo esc_attr($service['icon']); ?> fa-2x  mb-2 pe-3"></i>
 						<?php echo esc_html($service['title']); ?>
 					</button>
 				</h2>

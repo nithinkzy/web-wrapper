@@ -406,7 +406,9 @@ footer {
 
 .services-page {
     margin-top: 5%;
-
+    i {
+        color:$gold;
+    }
     .card {
         border-radius: 28px;
         padding: 1rem;
@@ -418,10 +420,10 @@ footer {
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.32);
         min-height: 250px;
-
         i {
             margin-bottom: 1.5rem !important;
         }
+     
         .card-text{
             font-weight: normal;
         }
