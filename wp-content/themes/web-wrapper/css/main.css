@@ -12136,6 +12136,32 @@ header a {
   border: 1px solid #F3EFEF;
 }
 
+#why .why-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+#why .why-cards .card {
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#why .why-cards .card i {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #c5a532;
+}
+#why .why-cards .card strong {
+  font-size: 12px;
+}
+#why .why-cards .card p {
+  font-size: 9px;
+  margin: 0;
+}
+
 #services p {
   padding-bottom: 0.5rem;
 }
@@ -12217,6 +12243,7 @@ header a {
   border: 1px solid rgba(255, 255, 255, 0.1843137255);
   border-radius: 28px;
   padding: 1rem 2rem;
+  font-size: 12px;
 }
 @media (min-width: 992px) {
   #testimonials .review-card {

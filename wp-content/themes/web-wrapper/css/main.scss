@@ -224,7 +224,38 @@ header {
     }
 }
 
+#why {
+    .why-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
 
+        .card {
+            border-radius: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+            i {
+                font-size: 3rem;
+                margin-bottom: 0.5rem;
+                color: #c5a532;
+            }
+
+            strong {
+                font-size: 12px;
+            }
+
+            p {
+                font-size: 9px;
+                margin: 0;
+            }
+
+        }
+    }
+}
 
 #services {
 
@@ -332,6 +363,7 @@ header {
         border: 1px solid #ffffff2f;
         border-radius: 28px;
         padding: 1rem 2rem;
+        font-size: 12px;
 
         @include media-breakpoint-up(lg) {
             width: 30%;

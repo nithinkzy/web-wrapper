@@ -51,7 +51,7 @@ get_header();
 					<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
 						<div class="d-flex gap-3 gap-md-5 align-items-center">
 							<a class="btn btn-secondary" href="/services">SERVICES</a>
-							<a class="btn btn-primary" href="/contact">let's talk</a>
+							<a class="btn btn-primary" href="/contact">Contact</a>
 						</div>
 						<div class="col-12 col-md-5">
 
@@ -120,7 +120,8 @@ get_header();
 			<div class="d-flex justify-content-between align-items-center">
 				<div class="col-12 col-md-10">
 					<h2 class="display-4 mb-4">We Will Help You <br> Stand Out From Your Competitors.</h2>
-					<p class="mb-4">Welcome to Web-Wrapper, your premier destination for affordable and bespoke website solutions. Based in Toronto, Canada, and serving clients worldwide, we specialize in crafting unique online identities that set you apart from the competition. Whether you're a budding entrepreneur or an established business, our team is dedicated to creating stunning websites that capture your brand essence and drive results. From website design and development to optimization and support, we're here to help you shine in the digital arena.</p>
+					<p class="mb-4">
+						Welcome to Web-Wrapper, your go-to source for tailored, budget-friendly website solutions. Situated in Toronto, Canada, with a global clientele, we excel in crafting distinct online personas. Whether you're launching a startup or leading an enterprise, our team specializes in creating impactful websites that reflect your brand identity and yield tangible outcomes. From design and development to ongoing support, we're committed to amplifying your digital presence.</p>
 					<a class="btn btn-secondary" href="/services">About Us</a>
 				</div>
 				<!-- <img src="<?php echo get_template_directory_uri() . '/img/why-choose-web-wrapper.jpeg' ?>" alt="Step 1 Image" class="img-fluid"> -->
@@ -128,6 +129,57 @@ get_header();
 			</div>
 		</div>
 	</section>
+
+	<section id="why" class="section-spacing">
+		<div class="container-xxl">
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="col-12 col-md-10">
+					<h2 class="display-4 mb-4">Why Need a Website</h2>
+					<div class="why-cards">
+						<div class="card">
+							<i class="fas fa-eye"></i>
+							<p><strong>Visibility</strong></p>
+							<p>Be Found.</p>
+						</div>
+
+						<div class="card">
+							<i class="fas fa-check-circle"></i>
+							<p><strong>Credibility</strong></p>
+							<p>Establish Trust.</p>
+						</div>
+
+						<div class="card">
+							<i class="fas fa-globe"></i>
+							<p><strong>Accessibility</strong></p>
+							<p>Reach Anywhere.</p>
+						</div>
+
+						<div class="card">
+							<i class="fas fa-chart-line"></i>
+							<p><strong>Growth</strong></p>
+							<p>Expand Reach.</p>
+						</div>
+
+						<div class="card">
+							<i class="fas fa-comments"></i>
+							<p><strong>Engagement</strong></p>
+							<p>Connect Instantly.</p>
+						</div>
+
+						<div class="card">
+							<i class="fas fa-handshake"></i>
+							<p><strong>Opportunity</strong></p>
+							<p>Seize Markets.</p>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
 	<section id="services" class="section-spacing">
 		<div class="container-xxl">
 			<div class="d-flex align-items-center justify-content-between mb-3 mb-md-5 ">
@@ -140,7 +192,7 @@ get_header();
 				<li>E-commerce</li>
 				<li>Custom Web App</li>
 			</ul>
-		
+
 			<div class="services-card mb-5">
 				<p>Design</p>
 				<p>Development</p>
