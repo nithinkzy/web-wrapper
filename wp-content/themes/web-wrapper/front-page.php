@@ -48,15 +48,15 @@ get_header();
 
 					<h1 class="display-1 mb-5">We believe, every business<span> Deserves a Website</span></h1>
 
-					<div class="d-flex justify-content-between mb-5">
-						<div class="d-flex gap-5 align-items-center">
-							<a class="btn btn-secondary" href="/services">explore SERVICES</a>
-							<a class="btn btn-primary" href="/contact">START NOW</a>
+					<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+						<div class="d-flex gap-3 gap-md-5 align-items-center">
+							<a class="btn btn-secondary" href="/services">SERVICES</a>
+							<a class="btn btn-primary" href="/contact">let's talk</a>
 						</div>
-						<div class="col-4">
+						<div class="col-12 col-md-5">
 
-							<p class=" ">Toronto, Canada based web agency for affordable websites. </p>
-							<p class="fw-bold"><i class="fa-solid fa-certificate pe-2" style="color: #FFD43B;"></i>100% Money-Back Guarantee Included.</p>
+							<p class="d-none d-md-block ">Toronto, Canada based web agency for affordable websites. </p>
+							<p class="fw-bold mt-3 money-back"><i class="fa-solid fa-certificate pe-2" style="color: #FFD43B;"></i>100% Money-Back Guarantee Included.</p>
 						</div>
 
 					</div>
@@ -73,7 +73,7 @@ get_header();
 
 
 			</div>
-			<p class="text-center link-underline-light">Recent works</p>
+			<p class="text-center link-underline-light d-none d-md-block">Recent works</p>
 
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
@@ -115,33 +115,32 @@ get_header();
 	</section>
 
 
-	<section id="about">
+	<section id="about" class="section-spacing">
 		<div class="container-xxl">
 			<div class="d-flex justify-content-between align-items-center">
-				<div class="col-5">
-					<h2 class="display-4 mb-4">We Will Help You Stand Out From Your Competitors.</h2>
+				<div class="col-12 col-md-10">
+					<h2 class="display-4 mb-4">We Will Help You <br> Stand Out From Your Competitors.</h2>
 					<p class="mb-4">Welcome to Web-Wrapper, your premier destination for affordable and bespoke website solutions. Based in Toronto, Canada, and serving clients worldwide, we specialize in crafting unique online identities that set you apart from the competition. Whether you're a budding entrepreneur or an established business, our team is dedicated to creating stunning websites that capture your brand essence and drive results. From website design and development to optimization and support, we're here to help you shine in the digital arena.</p>
 					<a class="btn btn-secondary" href="/services">About Us</a>
 				</div>
-				<img src="<?php echo get_template_directory_uri() . '/img/why-choose-web-wrapper.jpeg' ?>" alt="Step 1 Image" class="img-fluid">
+				<!-- <img src="<?php echo get_template_directory_uri() . '/img/why-choose-web-wrapper.jpeg' ?>" alt="Step 1 Image" class="img-fluid"> -->
 
 			</div>
 		</div>
 	</section>
-	<section id="services" class="">
+	<section id="services" class="section-spacing">
 		<div class="container-xxl">
-			<div class="d-flex align-items-center justify-content-between mb-5">
-
+			<div class="d-flex align-items-center justify-content-between mb-3 mb-md-5 ">
 				<h2 class="display-4">Services we offer.</h2>
-				<a class="btn btn-secondary" href="/contact">Talk to us</a>
+				<a class="btn btn-secondary d-none d-md-block" href="/contact">Let's talk</a>
 			</div>
-
 			<ul class="d-flex justify-content-around ">
 				<li>Business Website</li>
 				<li>Landing Page</li>
 				<li>E-commerce</li>
 				<li>Custom Web App</li>
 			</ul>
+		
 			<div class="services-card mb-5">
 				<p>Design</p>
 				<p>Development</p>
@@ -150,10 +149,8 @@ get_header();
 				<p>Maintainence</p>
 				<p>Search Engine Optimization</p>
 				<!-- <p>SEO</p> -->
-
 			</div>
-
-			<!-- <a class="btn btn-primary" href="/services">DISCOVER YOUR SOLUTION</a> -->
+			<!-- <a class="btn btn-primary d-md-none" href="/services">DISCOVER YOUR SOLUTION</a> -->
 		</div>
 	</section>
 
@@ -167,11 +164,11 @@ get_header();
 	</section>
 
 
-	<section id="testimonials">
+	<section id="testimonials" class="section-spacing">
 		<div class="container-xxl mb-5">
 
 			<h2 class="display-4 mb-5 text-center">Testimonials</h2>
-			<div class="d-flex justify-content-evenly ">
+			<div class="d-flex flex-column flex-lg-row justify-content-evenly gap-2">
 				<?php
 				$args = array(
 					'post_type'      => 'testimonial',
