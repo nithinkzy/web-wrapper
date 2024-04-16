@@ -23,7 +23,7 @@
 			<a href="mailto:info@web-wrapper.com" class="btn btn-link">
 				info@web-wrapper.com</a>
 			<p class="mb-4">Build the website your business deserves</p>
-			<div class="d-flex justify-content-evenly w-100 py-3">
+			<div class="d-flex justify-content-evenly col-10  col-lg-3 py-3">
 
 				<a href="mailto:info@web-wrapper.com">
 					<!-- <h6 class=""><i class="fa-solid fa-envelope pe-2"></i>info@web-wrapper.com</h6> -->
