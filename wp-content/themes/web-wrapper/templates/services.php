@@ -91,13 +91,13 @@ $services = array(
 );
 ?>
 
-<div class="container py-5 services-page">
+<div class="container py-5 services-page page">
 
 	<!-- Main Title and Subtitle -->
 	<div class="row mb-5 pb-4">
 		<div class="col-12 col-lg-8 mx-auto text-center">
-			<h1 class="display-6 mb-3"> <span>Our Services</span> <br> Web Design, Development, SEO, and More</h1>
-			<p class="lead">Tailored Solutions for Small to Medium Businesses</p>
+			<h1 class="display-6 mb-3"> <span>Our Services</span> </h1>
+			<p class="lead">Solutions for all Businesses</p>
 		</div>
 	</div>
 

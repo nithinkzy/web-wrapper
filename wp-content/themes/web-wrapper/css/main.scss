@@ -422,6 +422,9 @@ footer {
         i {
             margin-bottom: 1.5rem !important;
         }
+        .card-text{
+            font-weight: normal;
+        }
     }
 
     .accordion-button {
@@ -567,7 +570,7 @@ footer {
 .page{
     margin-top: 15vh;
     p{
-        font-weight: 100;
+        font-weight: 200;
     }
 }
 .about-page {

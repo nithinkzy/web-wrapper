@@ -12292,6 +12292,9 @@ footer .brand {
 .services-page .card i {
   margin-bottom: 1.5rem !important;
 }
+.services-page .card .card-text {
+  font-weight: normal;
+}
 .services-page .accordion-button {
   font-size: 12px;
   line-height: 14.4px;
@@ -12402,7 +12405,7 @@ footer .brand {
   margin-top: 15vh;
 }
 .page p {
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .about-page .values {
