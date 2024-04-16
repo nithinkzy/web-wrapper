@@ -14,48 +14,32 @@
 
 
 </div>
-<footer class="py-5">
+
+
+<footer>
 	<div class="container">
-		<div class="row flex-column-reverse flex-md-row justify-content-center justify-content-md-around">
-			<!-- Logo and Slogan -->
-			<div class="col-12  col-md-6 col-lg-4">
-				<a class="navbar-brand mb-5" href="<?php echo esc_url(home_url('/')); ?>">
-				<a href="/">
-					<h5 class="mb-5 brand">Web-Wrapper</h5>
-				</a>	
+		<div class="d-flex flex-column justify-content-center align-items-center">
 
+			<a href="mailto:info@web-wrapper.com" class="btn btn-link">
+				info@web-wrapper.com</a>
+			<p class="mb-4">Build the website your business deserves</p>
+			<div class="d-flex justify-content-evenly w-100 py-3">
+
+				<a href="mailto:info@web-wrapper.com">
+					<!-- <h6 class=""><i class="fa-solid fa-envelope pe-2"></i>info@web-wrapper.com</h6> -->
+					<h6 class=""><i class="fa-solid fa-envelope pe-2"></i>Email</h6>
 				</a>
-				<!-- <img src="your-logo.png" alt="Your Logo" class="img-fluid mb-3"> -->
-				<p class="mt-3">Empowering businesses with affordable and innovative web solutions. Your success is our priority.</p>
-
-
-			</div>
-
-			<!-- Quick Links -->
-			<div class="col-12  col-md-6 col-lg-4 mb-5 ">
-				<a href="/contact">
-
-					<h5 class="mb-5">Contact us</h5>
-					
+				<a href="tel:+14379245244">
+					<h6 class=""><i class="fa-brands fa-whatsapp pe-2"></i>Whatsapp</h6>
 				</a>
-				<a href="mailto:info@web-wrapper.com" class="text-decoration-none">
-					<h6 class="">info@web-wrapper.com</h6>
-				</a>
-				<a href="tel:+14379245244" class="text-decoration-none">
-					<h6 class="">+1 (437) - 924 - 5244</h6>
-				</a>
-			</div>
-
-			<!-- Free Consultation Form -->
-			<div class="col-lg-4 text-lg-end d-none d-lg-block">
-				<h5 class="mb-5">Interested in our services? </h5>
-				<p class="mb-3">Email us a "Hi" or your queries for a free consultation. We'll reach out to assist you!</p>
-
 			</div>
 		</div>
 
+
 	</div>
+	<h5 class=" brand">Web-Wrapper</h5>
 </footer>
+
 
 
 

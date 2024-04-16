@@ -12005,9 +12005,14 @@ li {
 
 header {
   position: absolute;
-  top: 80px;
+  top: 20px;
   left: 4%;
   width: 90%;
+}
+@media (min-width: 768px) {
+  header {
+    top: 80px;
+  }
 }
 header .brand {
   font-size: 1.4rem;
@@ -12060,7 +12065,7 @@ header a {
   background-size: cover;
   color: #F3EFEF;
   width: 98%;
-  margin: 50px auto;
+  margin: 0 auto;
   padding: 3em 0em;
   border-radius: 28px;
 }
@@ -12093,18 +12098,36 @@ header a {
     font-size: 5.4rem;
   }
 }
+.hero .money-back {
+  font-size: 10px;
+}
 .hero .swiper {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-top: 50px; */
+  /* padding-bottom: 50px; */
   position: relative;
   bottom: 1rem;
-  left: -7%;
+  /* left: -7%; */
   width: 100vw;
+}
+@media (min-width: 768px) {
+  .hero .swiper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    bottom: 1rem;
+    left: -7%;
+    width: 100vw;
+  }
 }
 .hero .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 643px;
+  width: 250px;
+}
+@media (min-width: 768px) {
+  .hero .swiper-slide {
+    width: 643px;
+  }
 }
 .hero .swiper-slide img {
   display: block;
@@ -12113,18 +12136,16 @@ header a {
   border: 1px solid #F3EFEF;
 }
 
-#services {
-  margin-top: 5%;
-}
-#services ul {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-}
-#services ul li {
+#services p {
   padding-bottom: 0.5rem;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+}
+#services li {
+  font-size: 10px;
+}
+@media (min-width: 768px) {
+  #services li {
+    font-size: 0.75rem;
+  }
 }
 #services .services-card {
   display: flex;
@@ -12138,9 +12159,23 @@ header a {
   background: #F3EFEF;
   color: #222222;
   border-radius: 28px;
-  font-size: 45px;
+  font-size: 25px;
   FONT-WEIGHT: 600;
   border: 1px solid #F3EFEF;
+}
+@media (min-width: 768px) {
+  #services .services-card p {
+    font-size: 45px;
+  }
+}
+
+.section-spacing {
+  padding: 40px 0px;
+}
+@media (min-width: 768px) {
+  .section-spacing {
+    padding: 80px 0px;
+  }
 }
 
 #about {
@@ -12161,7 +12196,7 @@ header a {
   background: #F3EFEF;
   color: #222222;
   width: 90%;
-  margin: 8em auto;
+  margin: 0 auto;
   padding: 3em 0em;
   border-radius: 28px;
 }
@@ -12179,10 +12214,14 @@ header a {
 
 #testimonials .review-card {
   background-color: #1A1A1A;
-  width: 30%;
   border: 1px solid rgba(255, 255, 255, 0.1843137255);
   border-radius: 28px;
   padding: 1rem 2rem;
+}
+@media (min-width: 992px) {
+  #testimonials .review-card {
+    width: 30%;
+  }
 }
 #testimonials .review-card img {
   height: 75px;
@@ -12199,11 +12238,17 @@ footer {
   width: 98%;
   margin: 0 auto;
   color: #F8F9FA;
+  margin-bottom: 50px;
+  padding: 1rem 0;
 }
 footer .brand {
   font-size: 1.4rem;
   font-weight: 900;
-  letter-spacing: 1px;
+  letter-spacing: -3px;
+  text-align: center;
+  font-size: 3rem;
+  opacity: 0.4;
+  font-family: "Spectral";
 }
 
 .services-page {

@@ -73,9 +73,14 @@ li {
 
 header {
     position: absolute;
-    top: 80px;
+    top: 20px;
     left: 4%;
     width: 90%;
+
+    @include media-breakpoint-up(md) {
+        top: 80px;
+
+    }
 
     .brand {
         font-size: 1.4rem;
@@ -144,19 +149,21 @@ header {
     // background: #141414;
     color: #F3EFEF;
     width: 98%;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 3em 0em;
     border-radius: 28px;
 
     @include media-breakpoint-up(md) {
         width: 95%;
     }
+
     @include media-breakpoint-up(lg) {
         width: 90%;
     }
 
     .heading {
         padding-top: 5em;
+
         @include media-breakpoint-up(md) {
             padding-top: 15em;
         }
@@ -174,19 +181,38 @@ header {
         }
     }
 
+    .money-back {
+        font-size: 10px;
+    }
+
     .swiper {
-        padding-top: 50px;
-        padding-bottom: 50px;
+
+
+        /* padding-top: 50px; */
+        /* padding-bottom: 50px; */
         position: relative;
         bottom: 1rem;
-        left: -7%;
+        /* left: -7%; */
         width: 100vw;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            position: relative;
+            bottom: 1rem;
+            left: -7%;
+            width: 100vw;
+        }
     }
 
     .swiper-slide {
         background-position: center;
         background-size: cover;
-        width: 643px;
+        width: 250px;
+
+        @include media-breakpoint-up(md) {
+            width: 643px;
+        }
 
     }
 
@@ -201,19 +227,21 @@ header {
 
 
 #services {
-    margin-top: 5%;
 
-    ul {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
 
-        li {
-            padding-bottom: 0.5rem;
-            text-decoration: underline;
-            text-underline-offset: 0.2em;
+
+    p {
+        padding-bottom: 0.5rem;
+
+
+    }
+
+    li {
+        font-size: 10px;
+
+        @include media-breakpoint-up(md) {
+            font-size: .75rem;
         }
-
     }
 
     .services-card {
@@ -232,12 +260,25 @@ header {
             background: #F3EFEF;
             color: $font-color;
             border-radius: 28px;
-            font-size: 45px;
+            font-size: 25px;
             FONT-WEIGHT: 600;
             border: 1px solid #F3EFEF;
 
+            @include media-breakpoint-up(md) {
+                font-size: 45px;
+            }
         }
     }
+}
+
+.section-spacing {
+    padding: 40px 0px;
+
+    @include media-breakpoint-up(md) {
+        padding: 80px 0px;
+    }
+
+
 }
 
 #about {
@@ -265,7 +306,7 @@ header {
     background: #F3EFEF;
     color: $font-color;
     width: 90%;
-    margin: 8em auto;
+    margin: 0 auto;
     padding: 3em 0em;
     border-radius: 28px;
 
@@ -288,10 +329,14 @@ header {
 
     .review-card {
         background-color: #1A1A1A;
-        width: 30%;
         border: 1px solid #ffffff2f;
         border-radius: 28px;
         padding: 1rem 2rem;
+
+        @include media-breakpoint-up(lg) {
+            width: 30%;
+
+        }
 
         img {
             height: 75px;
@@ -309,11 +354,17 @@ footer {
     width: 98%;
     margin: 0 auto;
     color: #F8F9FA;
+    margin-bottom: 50px;
+    padding: 1rem 0;
 
     .brand {
         font-size: 1.4rem;
         font-weight: 900;
-        letter-spacing: 1px;
+        letter-spacing: -3px;
+        text-align: center;
+        font-size: 3rem;
+        opacity: 0.4;
+        font-family: 'Spectral';
     }
 }
 
