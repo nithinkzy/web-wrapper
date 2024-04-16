@@ -27,13 +27,13 @@ get_header();
 ?>
 
 <!-- Add this within your about page -->
-<div class="container py-5 about-page">
+<div class="container py-5 about-page page">
 
     <!-- About Title Section -->
     <div class="row text-center mb-5 pb-4">
         <div class="col-12 col-md-8 mx-auto">
-            <h1 class="display-5 mb-3"><span>About Us</span> <br> Your Digital <br> Transformation Partner</h1>
-            <p class="lead">Affordable Websites Tailored for Impact</p>
+            <h1 class="display-5 mb-3"><span>About Us</span> </h1>
+            <p class="lead">Affordable Websites for Impact</p>
         </div>
     </div>
 

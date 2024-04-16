@@ -12065,7 +12065,7 @@ header a {
   background-size: cover;
   color: #F3EFEF;
   width: 98%;
-  margin: 0 auto;
+  margin: 15px auto 0 auto;
   padding: 3em 0em;
   border-radius: 28px;
 }
@@ -12398,15 +12398,20 @@ footer .brand {
   font-size: 11px;
 }
 
-.about-page {
-  margin-top: 5%;
+.page {
+  margin-top: 15vh;
 }
+.page p {
+  font-weight: 100;
+}
+
 .about-page .values {
   gap: 2rem;
   color: #222222;
 }
 .about-page .values i {
   font-size: 2rem;
+  color: #c5a532;
 }
 @media (min-width: 768px) {
   .about-page .values {

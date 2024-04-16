@@ -7,12 +7,12 @@
         <!-- Why Choose Web-Wrapper Section -->
 
 
-        <div class="d-flex justify-content-between mb-4">
+        <!-- <div class="d-flex justify-content-between mb-4">
 
             <p><i class="fa-solid fa-sack-dollar pe-2"></i> Money-Back Guarantee Included.</p>
             <p><i class="fa-solid fa-arrow-up-right-dots pe-2"></i> Built To Convert Over Your Competitors</p>
             <p><i class="fa-solid fa-house pe-2"></i> Toronto Developed & Operated</p>
-        </div>
+        </div> -->
         <!-- Transformation and Contact Section -->
         <div class="row">
             <div class="col-12 text-center">

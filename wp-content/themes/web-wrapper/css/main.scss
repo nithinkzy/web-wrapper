@@ -5,6 +5,8 @@
 // $sale: rgba(167, 4, 4, 0.8);
 
 $primary: #3cb816;
+$gold: #c5a532;
+
 $secondary: #D9D9D9;
 $headings-font-family: "Martel Sans", sans-serif;
 $font-family-base: "Spectral", serif;
@@ -149,7 +151,7 @@ header {
     // background: #141414;
     color: #F3EFEF;
     width: 98%;
-    margin: 0 auto;
+    margin: 15px auto 0 auto;
     padding: 3em 0em;
     border-radius: 28px;
 
@@ -562,9 +564,13 @@ footer {
     }
 }
 
-
+.page{
+    margin-top: 15vh;
+    p{
+        font-weight: 100;
+    }
+}
 .about-page {
-    margin-top: 5%;
 
 
 
@@ -575,6 +581,8 @@ footer {
 
         i {
             font-size: 2rem;
+            color: $gold;
+
         }
     }
 
