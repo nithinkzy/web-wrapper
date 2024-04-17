@@ -12224,10 +12224,15 @@ li {
 #cta {
   background: #F3EFEF;
   color: #222222;
-  width: 90%;
+  width: 96%;
   margin: 0 auto;
   padding: 3em 0em;
   border-radius: 28px;
+}
+@media (min-width: 768px) {
+  #cta {
+    width: 90%;
+  }
 }
 #cta p {
   font-size: 1.5rem;

@@ -100,7 +100,8 @@ li {
 
 
     }
-    i{
+
+    i {
         font-size: 1.5rem;
     }
 
@@ -343,10 +344,14 @@ li {
 
     background: #F3EFEF;
     color: $font-color;
-    width: 90%;
+    width: 96%;
     margin: 0 auto;
     padding: 3em 0em;
     border-radius: 28px;
+
+    @include media-breakpoint-up(md) {
+        width: 90%;
+    }
 
     p {
         font-size: 1.5rem;
@@ -581,7 +586,7 @@ li {
     margin-top: 15vh;
     background-color: #222222;
 
-  
+
 }
 
 .about-page {
