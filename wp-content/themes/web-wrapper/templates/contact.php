@@ -26,12 +26,12 @@ add_filter('document_title_parts', 'custom_document_title_parts');
 get_header();
 ?>
 <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
-<div class="container py-5 contact-us">
+<div class="container py-5 contact-us page">
 
     <!-- Contact Form Section -->
     <div class="row">
         <div class="col-12 text-center">
-            <h1 class="display-6 mb-4"><span>Contact Us</span> <br> Transforming Your Online Presence</h1>
+            <h1 class="display-6 mb-4"><span>Contact Us</span></h1>
             <p class=" mb-4">Ready to transform your digital presence with Web-wrapper ?
                 <br>
                 Fantastic! simply complete the form below 😀
@@ -66,7 +66,7 @@ get_header();
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="w-100 btn btn-primary btn-lg ">Message Now</button>
+            <button type="submit" class="w-100 btn btn-primary btn-lg ">Send Message </button>
         </form>
         <!-- Display messages to the user -->
         <div id="status"></div>
