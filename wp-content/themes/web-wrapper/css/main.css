@@ -12005,7 +12005,7 @@ li {
 
 .navigation-bar {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 4%;
   width: 90%;
 }
@@ -12024,6 +12024,9 @@ li {
 }
 .navigation-bar a {
   color: white;
+}
+.navigation-bar i {
+  font-size: 1.5rem;
 }
 
 .show {
@@ -12408,9 +12411,6 @@ li {
   margin-top: 15vh;
   background-color: #222222;
 }
-.page p {
-  font-weight: 200;
-}
 
 .about-page .values {
   gap: 2rem;
@@ -12439,4 +12439,10 @@ li {
   border-radius: 28px;
   padding: 20px;
   margin-top: 6em;
+}
+
+.blog-single p {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: normal;
 }/*# sourceMappingURL=main.css.map */

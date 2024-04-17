@@ -81,7 +81,7 @@
 					<a href="/" class="brand">Web-wrapper</a>
 					<!-- Button to toggle mobile menu -->
 					<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>Menu
+						<i class="fa-solid fa-bars"></i>
 					</button>
 					<!-- Mobile menu content -->
 					<div class="collapse mobile-menu " id="mobileMenu">
@@ -94,7 +94,7 @@
 									<li><a class="display-4" href="/contact"> Contact</a></li>
 									<li><a class="display-4" href="/blogs"> Blogs</a></li>
 								</ul>
-								<button class="btn-secondary close-btn">Close</button>
+								<button class="btn-secondary close-btn"><i class="fa-solid fa-xmark"></i></button>
 							</div>
 							<div class="bottom-nav d-flex flex-column">
 								<a href="mailto:info@web-wrapper.com" class="text-decoration-none">
