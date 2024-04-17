@@ -11976,7 +11976,7 @@ a {
   color: white;
 }
 a:hover {
-  color: #3cb816;
+  color: #3cb816 !important;
 }
 
 ul,
