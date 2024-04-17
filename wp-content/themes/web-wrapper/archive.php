@@ -24,13 +24,13 @@ add_filter('document_title_parts', 'custom_document_title_parts');
 get_header(); ?>
 
 <main id="primary" class="site-main">
-	<div class="container py-5 portfolio-page">
+	<div class="container py-5 portfolio-page page">
 
 		<!-- Main Title and Subtitle -->
 		<div class="row  mb-5 pb-4">
 			<div class="col-12 col-lg-8 mx-auto text-center">
-				<h1 class="display-6 mb-3"><span>Portfolio</span> <br> Web-Wrapper's Digital Success Stories</h1>
-				<p class="lead">Explore Our Innovative and Impactful Projects</p>
+				<h1 class="display-6 mb-3"><span>Portfolios</span></h1>
+				<p class="lead">Impactful Projects</p>
 			</div>
 		</div>
 
