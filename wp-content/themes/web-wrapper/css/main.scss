@@ -73,14 +73,15 @@ li {
 }
 
 
-header {
+
+.navigation-bar {
     position: absolute;
     top: 20px;
     left: 4%;
     width: 90%;
 
     @include media-breakpoint-up(md) {
-        top: 80px;
+        top: 50px;
 
     }
 
@@ -100,10 +101,11 @@ header {
 
     }
 
-
-
-
 }
+
+
+
+
 
 .show {
     display: block !important;
@@ -382,7 +384,7 @@ header {
     }
 }
 
-footer {
+.page-footer {
     background: #141414;
     border-radius: 28px;
     width: 98%;
@@ -406,9 +408,11 @@ footer {
 
 .services-page {
     margin-top: 5%;
+
     i {
-        color:$gold;
+        color: $gold;
     }
+
     .card {
         border-radius: 28px;
         padding: 1rem;
@@ -420,11 +424,12 @@ footer {
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.32);
         min-height: 250px;
+
         i {
             margin-bottom: 1.5rem !important;
         }
-     
-        .card-text{
+
+        .card-text {
             font-weight: normal;
         }
     }
@@ -569,12 +574,15 @@ footer {
     }
 }
 
-.page{
+.page {
     margin-top: 15vh;
-    p{
+    background-color: #222222;
+
+    p {
         font-weight: 200;
     }
 }
+
 .about-page {
 
 
@@ -607,4 +615,12 @@ footer {
         }
     }
 
+}
+
+.comments-area {
+
+    border-top: 1px solid white;
+    border-radius: 28px;
+    padding: 20px;
+    margin-top: 6em;
 }

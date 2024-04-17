@@ -16,7 +16,7 @@
 </div>
 
 
-<footer>
+<footer class="page-footer">
 	<div class="container">
 		<div class="d-flex flex-column justify-content-center align-items-center">
 
@@ -37,7 +37,7 @@
 
 
 	</div>
-	<h5 class=" brand">Web-Wrapper</h5>
+	<h5 class="brand">Web-Wrapper</h5>
 </footer>
 
 

@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.0-rc.1\n"
+"X-Generator: GlotPress/4.0.1\n"
 "Language: en_CA\n"
 "Project-Id-Version: Themes - Twenty Twenty-Three\n"
 
@@ -45,26 +45,26 @@ msgctxt "Custom template name"
 msgid "Blank"
 msgstr "Blank"
 
-#: theme.json styles/aubergine.json styles/block-out.json styles/canary.json
+#: styles/aubergine.json styles/block-out.json styles/canary.json
 #: styles/electric.json styles/grapes.json styles/marigold.json
 #: styles/pilgrimage.json styles/pitch.json styles/sherbet.json
-#: styles/whisper.json
+#: styles/whisper.json theme.json
 msgctxt "Color name"
 msgid "Tertiary"
 msgstr "Tertiary"
 
-#: theme.json styles/aubergine.json styles/block-out.json styles/canary.json
+#: styles/aubergine.json styles/block-out.json styles/canary.json
 #: styles/electric.json styles/grapes.json styles/marigold.json
 #: styles/pilgrimage.json styles/pitch.json styles/sherbet.json
-#: styles/whisper.json
+#: styles/whisper.json theme.json
 msgctxt "Color name"
 msgid "Secondary"
 msgstr "Secondary"
 
-#: theme.json styles/aubergine.json styles/block-out.json styles/canary.json
+#: styles/aubergine.json styles/block-out.json styles/canary.json
 #: styles/electric.json styles/grapes.json styles/marigold.json
 #: styles/pilgrimage.json styles/pitch.json styles/sherbet.json
-#: styles/whisper.json
+#: styles/whisper.json theme.json
 msgctxt "Color name"
 msgid "Primary"
 msgstr "Primary"
@@ -80,12 +80,13 @@ msgid "System Font"
 msgstr "System Font"
 
 #. Author of the theme
+#: style.css
 #, gp-priority: low
 msgid "the WordPress team"
 msgstr "the WordPress team"
 
 #. Author URI of the theme
-#: patterns/footer-default.php:20
+#: style.css patterns/footer-default.php:20
 #, gp-priority: low
 msgid "https://wordpress.org"
 msgstr "https://en-ca.wordpress.org"

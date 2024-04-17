@@ -75,7 +75,7 @@
 				</div>
 			</nav>
 		</header>#masthead -->
-		<header>
+		<header class="navigation-bar">
 			<div class="container">
 				<div class="d-flex align-items-center justify-content-between">
 					<a href="/" class="brand">Web-wrapper</a>

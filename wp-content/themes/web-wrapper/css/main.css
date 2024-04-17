@@ -12003,26 +12003,26 @@ li {
   border-radius: 28px;
 }
 
-header {
+.navigation-bar {
   position: absolute;
   top: 20px;
   left: 4%;
   width: 90%;
 }
 @media (min-width: 768px) {
-  header {
-    top: 80px;
+  .navigation-bar {
+    top: 50px;
   }
 }
-header .brand {
+.navigation-bar .brand {
   font-size: 1.4rem;
   font-weight: 900;
   letter-spacing: 1px;
 }
-header ul {
+.navigation-bar ul {
   gap: 5em;
 }
-header a {
+.navigation-bar a {
   color: white;
 }
 
@@ -12259,7 +12259,7 @@ header a {
   padding: 0;
 }
 
-footer {
+.page-footer {
   background: #141414;
   border-radius: 28px;
   width: 98%;
@@ -12267,7 +12267,7 @@ footer {
   color: #F8F9FA;
   padding: 1rem 0;
 }
-footer .brand {
+.page-footer .brand {
   font-size: 1.4rem;
   font-weight: 900;
   letter-spacing: -3px;
@@ -12406,6 +12406,7 @@ footer .brand {
 
 .page {
   margin-top: 15vh;
+  background-color: #222222;
 }
 .page p {
   font-weight: 200;
@@ -12431,4 +12432,11 @@ footer .brand {
     font-weight: 300;
     line-height: 15.6px;
   }
+}
+
+.comments-area {
+  border-top: 1px solid white;
+  border-radius: 28px;
+  padding: 20px;
+  margin-top: 6em;
 }/*# sourceMappingURL=main.css.map */
